@@ -1,0 +1,13 @@
+{
+  "name": "DogeGF",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DogeGF-Token/DogeGF.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-truffle5": "^2.0.2",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "hardhat": "^2.6.7",
+    "web3": "^1.6.0"
+  }
+}

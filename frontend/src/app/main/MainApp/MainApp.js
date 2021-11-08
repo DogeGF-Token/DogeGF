@@ -193,6 +193,19 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
+	artSection: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		paddingTop: 20,
+		marginBottom: 164,
+	},
+	artSectionLabel: {
+		marginBottom: 32,
+	},
+	artSectionTitle: {
+		marginBottom: 55,
+	},
 }));
 
 const MainApp = () => {
@@ -387,6 +400,16 @@ const MainApp = () => {
 						<ArrowForwardIcon />
 					</IconButton>
 				</Box>
+			</Box>
+
+			<Box id="art" className={classes.artSection}>
+				<SectionLabel className={classes.artSectionLabel}>
+					Curated by the DogeGF Team
+				</SectionLabel>
+
+				<SectionTitle className={classes.artSectionTitle}>
+					Community Art
+				</SectionTitle>
 			</Box>
 		</Container>
 	);

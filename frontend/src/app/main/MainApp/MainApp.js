@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Container from '@mui/material/Container';
@@ -10,6 +11,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import MainAppHeader from './MainAppHeader';
+import MainAppFooter from './MainAppFooter';
 import SectionLabel from './components/SectionLabel';
 import SectionTitle from './components/SectionTitle';
 import Button from './components/Button';
@@ -17,8 +19,15 @@ import StepBox from './components/StepBox';
 import PhaseBox from './components/PhaseBox';
 import TokenomicBox from './components/TokenomicBox';
 import BlogBox from './components/BlogBox';
+import FaqBox from './components/FaqBox';
 
-import { APP_HEADER_HEIGHT, PHASES, TOKENOMICS, BLOGS } from './constants';
+import {
+	APP_HEADER_HEIGHT,
+	PHASES,
+	TOKENOMICS,
+	BLOGS,
+	FAQS,
+} from './constants';
 
 const IconButton = styled(MuiIconButton)(({ theme }) => ({
 	width: 60,
@@ -206,10 +215,75 @@ const useStyles = makeStyles((theme) => ({
 	artSectionTitle: {
 		marginBottom: 55,
 	},
+	vaultsSection: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		height: 1094,
+		paddingTop: 101,
+		marginBottom: 151,
+		backgroundColor: theme.palette.primary.headText,
+		color: 'white',
+		borderRadius: 30,
+		background: `url('/assets/images/vaults.png') no-repeat center center`,
+		backgroundSize: 'cover',
+	},
+	vaultsSectionLabel: {
+		marginBottom: 35,
+		backgroundColor: 'rgba(255, 255, 255, 0.05)',
+		color: 'white',
+	},
+	vaultsSectionTitle: {
+		marginBottom: 174,
+		color: 'white',
+	},
+	vaultsSectionDescriptionPanel: {
+		display: 'flex',
+		flexDirection: 'column',
+		marginLeft: 321,
+		marginRight: 'auto',
+	},
+	vaultsSectionDescriptionTitle: {
+		marginBottom: 26,
+		color: '#EEEEEE',
+		fontSize: '1.875rem',
+		lineHeight: '2.25rem',
+	},
+	vaultsSectionDescription: {
+		marginBottom: 31,
+		color: '#EEEEEE',
+		fontSize: '0.875rem',
+		lineHeight: '2.25rem',
+	},
+	vaultsSectionActionButton: {
+		backgroundColor: 'white',
+		color: '#0044EB',
+	},
+	faqSection: {
+		display: 'flex',
+		height: 300,
+		padding: '20px 200px 0 340px',
+		marginBottom: 115,
+	},
+	faqSectionTitlePanel: {
+		marginRight: 180,
+	},
+	faqSectionLabel: {
+		marginBottom: 35,
+	},
+	faqSectionTitle: {},
+	faqSectionList: {
+		'& > *': {
+			'&:not(:last-child)': {
+				marginBottom: 31,
+			},
+		},
+	},
 }));
 
 const MainApp = () => {
 	const classes = useStyles();
+	const [openFaqId, setOpenFaqId] = useState('');
 
 	return (
 		<Container className={classes.root} fixed>
@@ -411,6 +485,60 @@ const MainApp = () => {
 					Community Art
 				</SectionTitle>
 			</Box>
+
+			<Box id="valuts" className={classes.vaultsSection}>
+				<SectionLabel className={classes.vaultsSectionLabel}>
+					Coming Soon
+				</SectionLabel>
+
+				<SectionTitle className={classes.vaultsSectionTitle}>
+					DogeGF vaults
+				</SectionTitle>
+
+				<Box className={classes.vaultsSectionDescriptionPanel}>
+					<Typography className={classes.vaultsSectionDescriptionTitle}>
+						Get rewards for <br />
+						providing liquidity
+					</Typography>
+
+					<Typography className={classes.vaultsSectionDescription}>
+						Facere dapibus nullam, exercitationem, vitae! <br />
+						Suscipit aliquet fringilla vestibulum ornare, <br />
+						asperiores. Condimentum? Officiis suscipit, id <br />
+						praesent dolorum iure
+					</Typography>
+
+					<Button
+						variant="contained"
+						className={classes.vaultsSectionActionButton}
+					>
+						Coming Soon
+					</Button>
+				</Box>
+			</Box>
+
+			<Box id="faq" className={classes.faqSection}>
+				<Box className={classes.faqSectionTitlePanel}>
+					<SectionLabel className={classes.faqSectionLabel}>
+						Knowledge Base
+					</SectionLabel>
+
+					<SectionTitle>Frequently asked questions.</SectionTitle>
+				</Box>
+
+				<Box className={classes.faqSectionList}>
+					{FAQS.map((faq) => (
+						<FaqBox
+							open={faq.id === openFaqId}
+							question={faq.question}
+							answer={faq.answer}
+							onToggle={() => setOpenFaqId(openFaqId === faq.id ? '' : faq.id)}
+						/>
+					))}
+				</Box>
+			</Box>
+
+			<MainAppFooter />
 		</Container>
 	);
 };

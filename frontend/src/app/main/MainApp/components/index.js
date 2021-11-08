@@ -5,3 +5,4 @@ export { default as StepBox } from './StepBox';
 export { default as PhaseBox } from './PhaseBox';
 export { default as TokenomicBox } from './TokenomicBox';
 export { default as BlogBox } from './BlogBox';
+export { default as FaqBox } from './FaqBox';

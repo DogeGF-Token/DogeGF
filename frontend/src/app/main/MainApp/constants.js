@@ -144,3 +144,30 @@ export const BLOGS = [
 		title: 'DogeGF is rewarding internet creators with kind gestures',
 	},
 ];
+
+export const FAQS = [
+	{
+		id: 'faq1',
+		question: 'What is Bitcoin?',
+		answer:
+			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
+	},
+	{
+		id: 'faq2',
+		question: 'Who created Bitcoin?',
+		answer:
+			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
+	},
+	{
+		id: 'faq3',
+		question: 'Who controls the Bitcoin network?',
+		answer:
+			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
+	},
+	{
+		id: 'faq4',
+		question: 'How does Bitcoin work?',
+		answer:
+			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
+	},
+];

@@ -84,3 +84,42 @@ export const PHASES = [
 		],
 	},
 ];
+
+export const TOKENOMICS = [
+	{
+		icon: '/assets/images/tokenomics/dollar.png',
+		color: '#867BF2',
+		title: 'Token Symbol',
+		description: '$DOGEGF',
+	},
+	{
+		icon: '/assets/images/tokenomics/lock.png',
+		color: '#F0A14C',
+		title: 'Locked Liquidity in Uniswap & Sushiswap',
+		description: '25%',
+	},
+	{
+		icon: '/assets/images/tokenomics/total.png',
+		color: '#70E9FF',
+		title: 'Total Supply',
+		description: '69,420,000,000,000,000',
+	},
+	{
+		icon: '/assets/images/tokenomics/ad.png',
+		color: '#5FDF0D',
+		title: 'Marketing & Community (66% Locked)',
+		description: '15%',
+	},
+	{
+		icon: '/assets/images/tokenomics/burn.png',
+		color: '#DB736F',
+		title: 'Burned Supply',
+		description: '50%',
+	},
+	{
+		icon: '/assets/images/tokenomics/team.png',
+		color: '#FE7CE1',
+		title: 'Team Wallet (Locked)',
+		description: '10%',
+	},
+];

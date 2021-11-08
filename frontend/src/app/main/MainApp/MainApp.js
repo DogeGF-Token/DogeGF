@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
@@ -10,8 +11,9 @@ import SectionTitle from './components/SectionTitle';
 import Button from './components/Button';
 import StepBox from './components/StepBox';
 import PhaseBox from './components/PhaseBox';
+import TokenomicBox from './components/TokenomicBox';
 
-import { APP_HEADER_HEIGHT, PHASES } from './constants';
+import { APP_HEADER_HEIGHT, PHASES, TOKENOMICS } from './constants';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -103,7 +105,8 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		alignItems: 'center',
 		paddingTop: 20,
-		marginBottom: 154,
+		paddingBottom: 74,
+		marginBottom: 80,
 	},
 	roadmapSectionLabel: {
 		marginBottom: 38,
@@ -120,6 +123,22 @@ const useStyles = makeStyles((theme) => ({
 				marginRight: 30,
 			},
 		},
+	},
+	tokenomicsSection: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		paddingTop: 20,
+		marginBottom: 177,
+	},
+	tokenomicsSectionLabel: {
+		marginBottom: 38,
+	},
+	tokenomicsSectionTitle: {
+		marginBottom: 55,
+	},
+	tokenomicsSectionGrid: {
+		width: 870,
 	},
 }));
 
@@ -250,6 +269,34 @@ const MainApp = () => {
 						/>
 					))}
 				</Box>
+			</Box>
+
+			<Box id="tokenomics" className={classes.tokenomicsSection}>
+				<SectionLabel className={classes.tokenomicsSectionLabel}>
+					Numbers and Stuff
+				</SectionLabel>
+
+				<SectionTitle className={classes.tokenomicsSectionTitle}>
+					Tokenomics
+				</SectionTitle>
+
+				<Grid
+					className={classes.tokenomicsSectionGrid}
+					container
+					spacing={3}
+					rowSpacing={3}
+				>
+					{TOKENOMICS.map((tokenomic) => (
+						<Grid item xs={4}>
+							<TokenomicBox
+								icon={tokenomic.icon}
+								color={tokenomic.color}
+								title={tokenomic.title}
+								description={tokenomic.description}
+							/>
+						</Grid>
+					))}
+				</Grid>
 			</Box>
 		</Container>
 	);

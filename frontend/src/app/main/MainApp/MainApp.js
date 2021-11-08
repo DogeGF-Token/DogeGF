@@ -9,8 +9,9 @@ import SectionLabel from './components/SectionLabel';
 import SectionTitle from './components/SectionTitle';
 import Button from './components/Button';
 import StepBox from './components/StepBox';
+import PhaseBox from './components/PhaseBox';
 
-import { APP_HEADER_HEIGHT } from './constants';
+import { APP_HEADER_HEIGHT, PHASES } from './constants';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -94,6 +95,29 @@ const useStyles = makeStyles((theme) => ({
 			textTransform: 'none',
 			'&:not(:last-child)': {
 				marginRight: 31,
+			},
+		},
+	},
+	roadmapSection: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		paddingTop: 20,
+		marginBottom: 154,
+	},
+	roadmapSectionLabel: {
+		marginBottom: 38,
+	},
+	roadmapSectionTitle: {
+		marginBottom: 68,
+	},
+	roadmapSectionPanel: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'space-evenly',
+		'& > *': {
+			'&:not(:last-child)': {
+				marginRight: 30,
 			},
 		},
 	},
@@ -205,6 +229,26 @@ const MainApp = () => {
 						<Button variant="contained">Buy on Uniswap</Button>
 						<Button variant="contained">Buy on Sushiswap</Button>
 					</Box>
+				</Box>
+			</Box>
+
+			<Box id="roadmap" className={classes.roadmapSection}>
+				<SectionLabel className={classes.roadmapSectionLabel}>
+					Past and Future
+				</SectionLabel>
+
+				<SectionTitle className={classes.roadmapSectionTitle}>
+					Roadmap
+				</SectionTitle>
+
+				<Box className={classes.roadmapSectionPanel}>
+					{PHASES.map((phase) => (
+						<PhaseBox
+							title={phase.title}
+							season={phase.season}
+							items={phase.items}
+						/>
+					))}
 				</Box>
 			</Box>
 		</Container>

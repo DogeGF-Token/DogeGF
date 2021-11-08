@@ -40,3 +40,47 @@ export const NAVIGATION_ITEMS = [
 		tag: '#faq',
 	},
 ];
+
+export const PHASES = [
+	{
+		title: 'Phase 1',
+		season: 'Q2 2021',
+		items: [
+			'Website launch',
+			'Token launch',
+			'Community giveaways and contests',
+			'Face recognized system',
+			'24/7 Full support',
+		],
+	},
+	{
+		title: 'Phase 2',
+		season: 'Q3 2021',
+		items: [
+			'Groundwork for strong community',
+			'Coingecko listing',
+			'Coinmarketcap listing',
+			'Litepaper',
+			'Reaching out to influencers',
+		],
+	},
+	{
+		title: 'Phase 3',
+		season: 'Q4 2021',
+		items: [
+			'Prepare submission for contract audit',
+			'DogeGF reward platform DogeGiFt',
+		],
+	},
+	{
+		title: 'Phase 4',
+		season: 'Q1 2022',
+		items: [
+			'Coming soon',
+			'Coming soon',
+			'Coming soon',
+			'Coming soon',
+			'Coming soon',
+		],
+	},
+];

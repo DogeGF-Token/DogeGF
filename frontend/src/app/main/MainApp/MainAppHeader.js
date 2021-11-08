@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: theme.palette.primary.main,
 		color: theme.palette.primary.contrastText,
 		boxShadow: '0 15.1525px 42.427px rgba(1, 33, 58, 0.07)',
+		borderRadius: '9.6976px',
 		fontWeight: 600,
 		fontSize: '1.125rem',
 		lineHeight: '1.375rem',

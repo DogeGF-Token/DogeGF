@@ -1,9 +1,13 @@
+import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import MuiIconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import MainAppHeader from './MainAppHeader';
 import SectionLabel from './components/SectionLabel';
@@ -12,8 +16,16 @@ import Button from './components/Button';
 import StepBox from './components/StepBox';
 import PhaseBox from './components/PhaseBox';
 import TokenomicBox from './components/TokenomicBox';
+import BlogBox from './components/BlogBox';
 
-import { APP_HEADER_HEIGHT, PHASES, TOKENOMICS } from './constants';
+import { APP_HEADER_HEIGHT, PHASES, TOKENOMICS, BLOGS } from './constants';
+
+const IconButton = styled(MuiIconButton)(({ theme }) => ({
+	width: 60,
+	height: 60,
+	backgroundColor: '#17262F',
+	color: 'white',
+}));
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -140,6 +152,47 @@ const useStyles = makeStyles((theme) => ({
 	tokenomicsSectionGrid: {
 		width: 870,
 	},
+	blogSection: {
+		position: 'relative',
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		padding: '86px 213px 131px 213px',
+		marginBottom: 142,
+		borderRadius: 30,
+		backgroundColor: '#F5F7FE',
+	},
+	blogSectionLabel: {
+		marginBottom: 32,
+	},
+	blogSectionTitle: {
+		marginBottom: 65,
+	},
+	blogSectionRocketman: {
+		position: 'absolute',
+		top: -224,
+		left: -85,
+	},
+	blogSectionPanel: {
+		display: 'flex',
+	},
+	blogSectionLeftButton: {
+		marginTop: 100,
+		marginRight: 50,
+	},
+	blogSectionRightButton: {
+		marginTop: 100,
+		marginLeft: 50,
+	},
+	blogSecionList: {
+		display: 'flex',
+		alignItems: 'center',
+		'& > *': {
+			'&:not(:last-child)': {
+				marginRight: 30,
+			},
+		},
+	},
 }));
 
 const MainApp = () => {
@@ -244,6 +297,7 @@ const MainApp = () => {
 						src="/assets/images/phone.png"
 						alt="how to buy"
 					/>
+
 					<Box className={classes.buySectionActionButtonBox}>
 						<Button variant="contained">Buy on Uniswap</Button>
 						<Button variant="contained">Buy on Sushiswap</Button>
@@ -297,6 +351,42 @@ const MainApp = () => {
 						</Grid>
 					))}
 				</Grid>
+			</Box>
+
+			<Box id="blog" className={classes.blogSection}>
+				<SectionLabel className={classes.blogSectionLabel}>Blog</SectionLabel>
+
+				<SectionTitle className={classes.blogSectionTitle}>
+					Read More
+				</SectionTitle>
+
+				<img
+					className={classes.blogSectionRocketman}
+					src="/assets/images/blogs/rocketman.png"
+					alt="rocketman"
+				/>
+
+				<Box className={classes.blogSectionPanel}>
+					<IconButton className={classes.blogSectionLeftButton}>
+						<ArrowBackIcon />
+					</IconButton>
+
+					<Box className={classes.blogSecionList}>
+						{BLOGS.map((blog) => (
+							<BlogBox
+								key={blog.id}
+								id={blog.id}
+								photo={blog.photo}
+								date={blog.date}
+								title={blog.title}
+							/>
+						))}
+					</Box>
+
+					<IconButton className={classes.blogSectionRightButton}>
+						<ArrowForwardIcon />
+					</IconButton>
+				</Box>
 			</Box>
 		</Container>
 	);

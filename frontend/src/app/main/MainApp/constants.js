@@ -123,3 +123,24 @@ export const TOKENOMICS = [
 		description: '10%',
 	},
 ];
+
+export const BLOGS = [
+	{
+		id: 'blog1',
+		photo: '/assets/images/blogs/blog1.png',
+		date: 'June 20, 2021',
+		title: 'Reciprocity, the new experiment in crypto — part 1',
+	},
+	{
+		id: 'blog2',
+		photo: '/assets/images/blogs/blog2.png',
+		date: 'May 25, 2021',
+		title: 'Meet DogeGF, the peer-to-peer coin of the new reciprocal society',
+	},
+	{
+		id: 'blog3',
+		photo: '/assets/images/blogs/blog3.png',
+		date: 'August 20, 2021',
+		title: 'DogeGF is rewarding internet creators with kind gestures',
+	},
+];

@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 14.18.1
@@ -16,7 +16,7 @@ jobs:
       with:
         node-version: 14.18.1
     - name: Install Packages
-      run: cd frontend && yarn install
+      run: cd frontend && yarn
     - name: Build page
       run: cd frondend && yarn run build
     - name: Deploy to gh-pages

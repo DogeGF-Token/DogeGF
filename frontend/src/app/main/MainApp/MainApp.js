@@ -37,9 +37,7 @@ const IconButton = styled(MuiIconButton)(({ theme }) => ({
 }));
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		minWidth: 1810,
-	},
+	root: {},
 	homeSection: {
 		display: 'flex',
 		flexDirection: 'column',
@@ -179,11 +177,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	blogSectionRocketman: {
 		position: 'absolute',
-		top: -224,
-		left: -85,
+		top: '-10%',
+		left: '-4%',
 	},
 	blogSectionPanel: {
 		display: 'flex',
+		alignItems: 'flex-start',
 	},
 	blogSectionLeftButton: {
 		marginTop: 100,
@@ -240,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
 	vaultsSectionDescriptionPanel: {
 		display: 'flex',
 		flexDirection: 'column',
-		marginLeft: 321,
+		marginLeft: '16%',
 		marginRight: 'auto',
 	},
 	vaultsSectionDescriptionTitle: {
@@ -261,12 +260,15 @@ const useStyles = makeStyles((theme) => ({
 	},
 	faqSection: {
 		display: 'flex',
+		justifyContent: 'center',
 		height: 300,
-		padding: '20px 200px 0 340px',
+		paddingTop: 20,
+		paddingLeft: '20%',
 		marginBottom: 115,
 	},
 	faqSectionTitlePanel: {
-		marginRight: 180,
+		width: '30%',
+		marginRight: '9%',
 	},
 	faqSectionLabel: {
 		marginBottom: 35,
@@ -286,7 +288,7 @@ const MainApp = () => {
 	const [openFaqId, setOpenFaqId] = useState('');
 
 	return (
-		<Container className={classes.root} fixed>
+		<Container className={classes.root} maxWidth="xl">
 			<MainAppHeader />
 
 			<Box id="home" className={classes.homeSection}>
@@ -404,6 +406,7 @@ const MainApp = () => {
 				<Box className={classes.roadmapSectionPanel}>
 					{PHASES.map((phase) => (
 						<PhaseBox
+							key={phase.title}
 							title={phase.title}
 							season={phase.season}
 							items={phase.items}
@@ -428,7 +431,7 @@ const MainApp = () => {
 					rowSpacing={3}
 				>
 					{TOKENOMICS.map((tokenomic) => (
-						<Grid item xs={4}>
+						<Grid key={tokenomic.title} item xs={4}>
 							<TokenomicBox
 								icon={tokenomic.icon}
 								color={tokenomic.color}
@@ -529,6 +532,7 @@ const MainApp = () => {
 				<Box className={classes.faqSectionList}>
 					{FAQS.map((faq) => (
 						<FaqBox
+							key={faq.id}
 							open={faq.id === openFaqId}
 							question={faq.question}
 							answer={faq.answer}

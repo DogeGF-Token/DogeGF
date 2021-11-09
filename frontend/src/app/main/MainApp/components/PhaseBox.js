@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		width: 370,
+		flex: '1 1 0',
 		height: 480,
 		paddingTop: 55,
 		border: '1px solid #C9D5FF',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	itemBox: {
 		display: 'flex',
-		alignItems: 'center',
+		alignItems: 'flex-start',
 	},
 	itemIcon: {
 		width: 10,
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	item: {
 		fontSize: '0.875rem',
-		lineHeight: '2.5rem',
+		lineHeight: '1.75rem',
 		color: theme.palette.primary.text,
 	},
 }));
@@ -56,8 +56,8 @@ const PhaseBox = (props) => {
 			<Typography className={classes.title}>{title}</Typography>
 			<Typography className={classes.season}>{season}</Typography>
 			<Box className={classes.itemList}>
-				{items.map((item) => (
-					<Box className={classes.itemBox}>
+				{items.map((item, index) => (
+					<Box key={index} className={classes.itemBox}>
 						<CheckIcon className={classes.itemIcon} />
 						<Typography className={classes.item}>{item}</Typography>
 					</Box>

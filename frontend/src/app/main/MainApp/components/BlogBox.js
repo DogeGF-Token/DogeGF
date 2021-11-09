@@ -4,10 +4,12 @@ import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		width: 370,
+		flex: '1 1 0',
 	},
 	photo: {
+		width: '100%',
 		marginBottom: 15,
+		borderRadius: 8,
 	},
 	date: {
 		marginBottom: 6,

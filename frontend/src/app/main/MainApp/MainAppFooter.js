@@ -22,7 +22,7 @@ const useStyles = makeStyles(({ theme }) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		padding: '52px 220px',
+		padding: '4% 11%',
 		margin: '46px 105px',
 		backgroundColor: '#F5F7FE',
 		borderRadius: 30,

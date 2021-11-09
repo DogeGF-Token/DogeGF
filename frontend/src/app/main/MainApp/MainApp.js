@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
-import clsx from 'clsx';
+import { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import IconButton from '@mui/material/IconButton';
+import MuiIconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 import MainAppHeader from './MainAppHeader';
 import MainAppFooter from './MainAppFooter';
@@ -29,6 +28,13 @@ import {
 	BLOGS,
 	FAQS,
 } from './constants';
+
+const IconButton = styled(MuiIconButton)(({ theme }) => ({
+	width: 60,
+	height: 60,
+	backgroundColor: '#17262F',
+	color: 'white',
+}));
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -179,12 +185,6 @@ const useStyles = makeStyles((theme) => ({
 	blogSectionPanel: {
 		display: 'flex',
 	},
-	blogSectionActionButton: {
-		width: 60,
-		height: 60,
-		backgroundColor: '#17262F',
-		color: 'white',
-	},
 	blogSectionLeftButton: {
 		marginTop: 100,
 		marginRight: 50,
@@ -279,33 +279,11 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
-	scrollTopButton: {
-		position: 'fixed',
-		right: 36,
-		bottom: 89,
-		width: 45,
-		height: 45,
-		border: '2px solid #0044EB',
-	},
 }));
 
 const MainApp = () => {
 	const classes = useStyles();
-	const [isScrollTop, setIsScrollTop] = useState(false);
 	const [openFaqId, setOpenFaqId] = useState('');
-
-	useEffect(() => {
-		window.addEventListener('scroll', (e) => {
-			if (window.pageYOffset > 0) {
-				setIsScrollTop(true);
-			}
-		});
-	});
-
-	const handleScrollTop = (e) => {
-		window.scrollTo(0, 0);
-		setIsScrollTop(false);
-	};
 
 	return (
 		<Container className={classes.root} fixed>
@@ -424,9 +402,8 @@ const MainApp = () => {
 				</SectionTitle>
 
 				<Box className={classes.roadmapSectionPanel}>
-					{PHASES.map((phase, index) => (
+					{PHASES.map((phase) => (
 						<PhaseBox
-							key={phase.title}
 							title={phase.title}
 							season={phase.season}
 							items={phase.items}
@@ -451,7 +428,7 @@ const MainApp = () => {
 					rowSpacing={3}
 				>
 					{TOKENOMICS.map((tokenomic) => (
-						<Grid key={tokenomic.title} item xs={4}>
+						<Grid item xs={4}>
 							<TokenomicBox
 								icon={tokenomic.icon}
 								color={tokenomic.color}
@@ -477,12 +454,7 @@ const MainApp = () => {
 				/>
 
 				<Box className={classes.blogSectionPanel}>
-					<IconButton
-						className={clsx(
-							classes.blogSectionActionButton,
-							classes.blogSectionLeftButton
-						)}
-					>
+					<IconButton className={classes.blogSectionLeftButton}>
 						<ArrowBackIcon />
 					</IconButton>
 
@@ -498,12 +470,7 @@ const MainApp = () => {
 						))}
 					</Box>
 
-					<IconButton
-						className={clsx(
-							classes.blogSectionActionButton,
-							classes.blogSectionRightButton
-						)}
-					>
+					<IconButton className={classes.blogSectionRightButton}>
 						<ArrowForwardIcon />
 					</IconButton>
 				</Box>
@@ -562,7 +529,6 @@ const MainApp = () => {
 				<Box className={classes.faqSectionList}>
 					{FAQS.map((faq) => (
 						<FaqBox
-							key={faq.id}
 							open={faq.id === openFaqId}
 							question={faq.question}
 							answer={faq.answer}
@@ -573,15 +539,6 @@ const MainApp = () => {
 			</Box>
 
 			<MainAppFooter />
-
-			{isScrollTop && (
-				<IconButton
-					className={classes.scrollTopButton}
-					onClick={handleScrollTop}
-				>
-					<ArrowUpwardIcon />
-				</IconButton>
-			)}
 		</Container>
 	);
 };

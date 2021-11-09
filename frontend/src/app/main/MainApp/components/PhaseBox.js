@@ -56,8 +56,8 @@ const PhaseBox = (props) => {
 			<Typography className={classes.title}>{title}</Typography>
 			<Typography className={classes.season}>{season}</Typography>
 			<Box className={classes.itemList}>
-				{items.map((item, index) => (
-					<Box key={index} className={classes.itemBox}>
+				{items.map((item) => (
+					<Box className={classes.itemBox}>
 						<CheckIcon className={classes.itemIcon} />
 						<Typography className={classes.item}>{item}</Typography>
 					</Box>

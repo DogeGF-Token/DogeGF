@@ -15,10 +15,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.18.1
+    - name: Go to frontend
+      run: cd ./frontend
     - name: Install Packages
-      run: cd ./frontend && yarn
+      run: yarn
     - name: Build page
-      run: cd ./frondend && yarn run build
+      run: yarn run build
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:

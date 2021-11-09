@@ -287,7 +287,7 @@ const useStyles = makeStyles((theme) => ({
 		bottom: 89,
 		width: 45,
 		height: 45,
-		color: '#0044EB'
+		color: '#0044EB',
 		border: '2px solid #0044EB',
 	},
 }));

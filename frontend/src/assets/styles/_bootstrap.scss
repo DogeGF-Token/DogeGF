@@ -1,0 +1,53 @@
+@import '~bootstrap/scss/functions';
+
+$primary: #01213a;
+
+@import '~bootstrap/scss/variables';
+
+$custom-colors: (
+	'head': #1a3454,
+	'normal': #404046,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+
+@import '~bootstrap/scss/utilities';
+
+$utilities: map-merge(
+	$utilities,
+	(
+		'width':
+			map-merge(
+				map-get($utilities, 'width'),
+				(
+					responsive: true,
+				)
+			),
+		'height':
+			map-merge(
+				map-get($utilities, 'height'),
+				(
+					responsive: true,
+				)
+			),
+	)
+);
+
+@import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-bottom: 0;
+}
+
+ul {
+	margin-bottom: 0;
+}

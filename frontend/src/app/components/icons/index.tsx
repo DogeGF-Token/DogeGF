@@ -1,0 +1,9 @@
+export { default as BurgerIcon } from './BurgerIcon';
+export { default as CloseIcon } from './CloseIcon';
+export { default as TwitterIcon } from './TwitterIcon';
+export { default as DiscordIcon } from './DiscordIcon';
+export { default as TelegramIcon } from './TelegramIcon';
+export { default as MediumIcon } from './MediumIcon';
+export { default as RedditIcon } from './RedditIcon';
+export { default as InstagramIcon } from './InstagramIcon';
+export { default as TiktokIcon } from './TiktokIcon';

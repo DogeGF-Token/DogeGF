@@ -1,0 +1,14 @@
+.section-title {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 43px;
+
+	color: var(--bs-head);
+
+	@include media-breakpoint-up(lg) {
+		font-size: 40px;
+		line-height: 48px;
+	}
+}

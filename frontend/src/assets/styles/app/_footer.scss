@@ -1,0 +1,96 @@
+#footer {
+	margin-bottom: 80px;
+
+	.footer-content {
+		position: relative;
+		padding: 45px;
+
+		background: #f5f7fe;
+		border-radius: 30px;
+	}
+
+	.panel-email {
+		margin-bottom: 29px;
+
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 26px;
+
+		color: var(--bs-normal);
+	}
+
+	.panel-social {
+		margin-bottom: 29px;
+
+		& > * {
+			color: black;
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	.panel-copyright {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 26px;
+
+		color: var(--bs-normal);
+	}
+
+	.btn {
+		position: absolute;
+		top: -18px;
+		right: 35px;
+		width: 35px;
+		height: 35px;
+
+		border-radius: 99999px;
+		border-width: 2px;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 53px;
+
+		.footer-content {
+			padding: 50px;
+		}
+
+		.btn {
+			top: -23px;
+			right: 45px;
+			width: 45px;
+			height: 45px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-left: 80px !important;
+		padding-right: 80px !important;
+		margin-bottom: 46px;
+
+		.footer-content {
+			padding: 52px;
+		}
+
+		.btn {
+			top: subtract(50%, 23px);
+			right: -7%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding-left: 120px !important;
+		padding-right: 120px !important;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		padding-left: 160px !important;
+		padding-right: 160px !important;
+	}
+}

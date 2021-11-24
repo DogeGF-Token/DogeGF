@@ -1,0 +1,104 @@
+#vaults {
+	margin-bottom: 56px;
+
+	.vaults-container {
+		padding-top: 46px;
+		padding-left: 32px;
+		padding-right: 32px;
+		padding-bottom: 107px;
+
+		background: url('/assets/images/vaults.png');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		border-radius: 30px;
+	}
+
+	.section-label {
+		margin-bottom: 26px;
+
+		background: rgba(255, 255, 255, 0.05) !important;
+		color: white !important;
+	}
+
+	.section-title {
+		margin-bottom: 36px;
+
+		color: white;
+	}
+
+	.panel-text {
+		margin-bottom: 40px;
+	}
+
+	.vaults-title {
+		margin-bottom: 26px;
+
+		font-family: Lato;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+
+		color: white;
+	}
+
+	.vaults-description {
+		margin-bottom: 31px;
+
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 26px;
+
+		color: #eeeeee;
+	}
+
+	.btn {
+		color: #0044eb !important;
+	}
+
+	@include media-breakpoint-up(sm) {
+		.panel-text {
+			max-width: 313px;
+			margin-bottom: 0;
+		}
+
+		.vaults-title {
+			margin-bottom: 16px;
+		}
+
+		.vaults-description {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 151px;
+
+		.vaults-container {
+			padding-top: 101px;
+		}
+
+		.section-label {
+			margin-bottom: 35px;
+		}
+
+		.section-title {
+			margin-bottom: 53px;
+		}
+
+		.vaults-title {
+			margin-bottom: 26px;
+		}
+
+		.vaults-description {
+			margin-bottom: 31px;
+		}
+
+		.browser-img {
+			max-width: 820px;
+		}
+	}
+}

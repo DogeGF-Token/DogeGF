@@ -1,0 +1,110 @@
+#home {
+	margin-bottom: 21px;
+
+	.home-container {
+		position: relative;
+		padding-top: 32px;
+		padding-left: 19px;
+
+		background-image: url('/assets/images/slider-mobile.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center right;
+		border-radius: 10px;
+	}
+
+	.panel-text {
+		max-width: 300px;
+	}
+
+	.section-label {
+		margin-bottom: 21px;
+	}
+
+	.section-title {
+		margin-bottom: 20px;
+
+		font-weight: 800;
+	}
+
+	.section-description {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 26px;
+
+		color: var(--bs-normal);
+	}
+
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		@if map-get($header-height, $breakpoint) {
+			@include media-breakpoint-up($breakpoint) {
+				height: subtract(100vh, map-get($header-height, $breakpoint));
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 34px;
+
+		.home-container {
+			padding-top: 43px;
+			padding-left: 36px;
+		}
+
+		.home-container {
+			background-image: url('/assets/images/slider-tablet.png');
+		}
+
+		.panel-text {
+			max-width: 400px;
+		}
+
+		.section-label {
+			margin-bottom: 13px;
+		}
+
+		.section-title {
+			margin-bottom: 13px;
+
+			font-size: 48px;
+			line-height: 58px;
+		}
+
+		.section-description {
+			font-size: 24px;
+			line-height: 26px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 1px;
+
+		.home-container {
+			background-image: url('/assets/images/slider-desktop.png');
+			background-position: center right 30%;
+			border-radius: 30px;
+		}
+
+		.panel-text {
+			max-width: 692px;
+		}
+
+		.section-label {
+			margin-bottom: 35px;
+		}
+
+		.section-title {
+			margin-bottom: 36px;
+
+			font-size: 60px;
+			line-height: 72px;
+		}
+
+		.section-description {
+			font-size: 36px;
+			line-height: 26px;
+		}
+	}
+}

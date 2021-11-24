@@ -1,0 +1,147 @@
+#tokenomics {
+	max-width: 390px;
+	padding-top: 20px;
+	padding-left: 35px;
+	padding-right: 35px;
+	margin-bottom: 57px;
+
+	.section-label {
+		margin-bottom: 23px;
+	}
+
+	.section-title {
+		margin-bottom: 36px;
+	}
+
+	.tokenomics-list {
+		margin-bottom: -24px;
+	}
+
+	.tokenomic-box {
+		max-width: 320px;
+		padding-top: 31px;
+		padding-bottom: 31px;
+		padding-left: 19px;
+		margin-bottom: 24px;
+
+		box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+		border-radius: 16px;
+	}
+
+	.tokenomic-icon {
+		width: 80px;
+		height: 80px;
+		margin-right: 21px;
+
+		border-radius: 99999px;
+
+		&.tokenomic-icon-1 {
+			background: rgba(#867bf2, 0.2);
+		}
+
+		&.tokenomic-icon-2 {
+			background: rgba(#f0a14c, 0.2);
+		}
+
+		&.tokenomic-icon-3 {
+			background: rgba(#70e9ff, 0.2);
+		}
+
+		&.tokenomic-icon-4 {
+			background: rgba(#5fdf0d, 0.2);
+		}
+
+		&.tokenomic-icon-5 {
+			background: rgba(#db736f, 0.2);
+		}
+
+		&.tokenomic-icon-6 {
+			background: rgba(#fe7ce1, 0.2);
+		}
+	}
+
+	.tokenomic-title {
+		margin-bottom: 5px;
+
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+
+		color: var(--bs-head);
+	}
+
+	.tokenomic-description {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 26px;
+
+		word-break: break-all;
+
+		color: var(--bs-normal);
+	}
+
+	@include media-breakpoint-up(md) {
+		max-width: 768px;
+		padding-left: 55px;
+		padding-right: 55px;
+		margin-bottom: 76px;
+
+		.section-title {
+			margin-bottom: 40px;
+		}
+
+		.tokenomics-list {
+			margin-bottom: -16px;
+			margin-right: -12px;
+		}
+
+		.tokenomic-box {
+			height: subtract(100%, 16px);
+			margin-bottom: 16px;
+			margin-right: 12px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		max-width: 872px;
+		margin-bottom: 177px;
+
+		.section-label {
+			margin-bottom: 38px;
+		}
+
+		.section-title {
+			margin-bottom: 55px;
+		}
+
+		.tokenomics-list {
+			margin-bottom: -33px;
+			margin-right: -31px;
+		}
+
+		.tokenomic-box {
+			width: 270px;
+			height: 270px;
+			margin-bottom: 33px;
+			margin-right: 31px;
+			padding-top: 50px;
+			padding-left: 42px;
+			padding-right: 27px;
+			padding-bottom: 0;
+		}
+
+		.tokenomic-icon {
+			margin-bottom: 21px;
+		}
+
+		.tokenomic-title {
+			max-width: 201px;
+
+			margin-bottom: 13px;
+		}
+	}
+}

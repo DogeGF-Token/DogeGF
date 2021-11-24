@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const dogegfContractAddress = '0xfb130d93e49dca13264344966a611dc79a456bc5';
 const burnTokenAddress = '0xdead000000000000000042069420694206942069';
-const lockTokenAddress = '0xc77aab3c6d7dab46248f3cc3033c856171878bd5';
+const lockTokenAddress = '0xdba68f07d1b7ca219f78ae8582c213d975c25caf';
 const marketingAvailableAddress = '0x6eCD8a67Ee7e4418374438EF092a3112ed2280d7';
 
 const web3Provider = new Web3.providers.HttpProvider(process.env.PROVIDER_URL);

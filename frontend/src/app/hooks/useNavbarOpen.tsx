@@ -27,9 +27,13 @@ const useNavbarOpen = (initialNavbarOpen: boolean) => {
 
 					setNavbarOpen(false);
 
+					const header = document.getElementById('header') as HTMLElement;
 					const target = document.querySelector(link.hash) as HTMLElement;
 
-					window.scrollTo(0, target.offsetTop);
+					setTimeout(
+						() => window.scrollTo(0, target.offsetTop - header.offsetHeight),
+						350
+					);
 				});
 			});
 	}, []);

@@ -11,13 +11,14 @@ export { default as Blog1Img } from 'assets/images/blogs/blog1.png';
 export { default as Blog2Img } from 'assets/images/blogs/blog2.png';
 export { default as Blog3Img } from 'assets/images/blogs/blog3.png';
 export { default as RocketmanImg } from 'assets/images/rocketman.png';
-export { default as Art1Img } from 'assets/images/arts/art1.png';
-export { default as Art2Img } from 'assets/images/arts/art2.png';
-export { default as Art3Img } from 'assets/images/arts/art3.png';
-export { default as Art4Img } from 'assets/images/arts/art4.png';
-export { default as Art5Img } from 'assets/images/arts/art5.png';
-export { default as Art6Img } from 'assets/images/arts/art6.png';
-export { default as Art7Img } from 'assets/images/arts/art7.png';
+export { default as Art1Img } from 'assets/images/arts/art1.jpg';
+export { default as Art2Img } from 'assets/images/arts/art2.jpg';
+export { default as Art3Img } from 'assets/images/arts/art3.jpg';
+export { default as Art4Img } from 'assets/images/arts/art4.jpg';
+export { default as Art5Img } from 'assets/images/arts/art5.jpg';
+export { default as Art6Img } from 'assets/images/arts/art6.jpg';
+export { default as Art7Img } from 'assets/images/arts/art7.jpg';
+export { default as Art8Img } from 'assets/images/arts/art8.jpg';
 
 export const FAQS = [
 	{

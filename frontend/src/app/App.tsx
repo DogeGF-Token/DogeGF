@@ -123,7 +123,7 @@ function App() {
               </li>
             </ul>
             <button
-              className="btn btn-outline-head border-2 text-uppercase float-end"
+              className="btn btn-outline-head border-2 text-uppercase"
               type="button"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"

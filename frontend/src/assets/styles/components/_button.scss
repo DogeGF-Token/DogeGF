@@ -1,15 +1,16 @@
 .btn {
 	width: 126px;
-	padding-top: 11px;
-	padding-bottom: 11px;
+	padding: 11px 8px;
 
 	border-radius: 5px;
 
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 600;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 14px;
+
+	white-space: nowrap;
 
 	@include media-breakpoint-up(lg) {
 		width: 210px;

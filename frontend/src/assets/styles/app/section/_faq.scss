@@ -12,40 +12,40 @@
 		margin-bottom: 36px;
 	}
 
-	ul {
-		li {
-			margin-bottom: 31px;
+	.faq-box {
+		margin-bottom: 31px;
+	}
 
-			.question-box {
-				margin-bottom: 14px;
+	.question-box {
+		margin-bottom: 14px;
 
-				cursor: pointer;
-			}
+		cursor: pointer;
+	}
 
-			i {
-				margin-right: 15px;
-			}
+	.faq-icon {
+		margin-right: 15px;
+	}
 
-			span {
-				font-family: Lato;
-				font-style: normal;
-				font-weight: 600;
-				font-size: 24px;
-				line-height: 29px;
+	.faq-title {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
 
-				color: var(--bs-head);
-			}
+		color: var(--bs-head);
+	}
 
-			p {
-				font-family: Lato;
-				font-style: normal;
-				font-weight: normal;
-				font-size: 14px;
-				line-height: 26px;
+	.answer-box {
+		font-family: Lato;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 26px;
 
-				color: var(--bs-normal);
-			}
-		}
+		word-break: break-word;
+
+		color: var(--bs-normal);
 	}
 
 	@include media-breakpoint-up(md) {

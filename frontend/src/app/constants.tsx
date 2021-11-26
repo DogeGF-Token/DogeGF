@@ -19,30 +19,3 @@ export { default as Art5Img } from 'assets/images/arts/art5.jpg';
 export { default as Art6Img } from 'assets/images/arts/art6.jpg';
 export { default as Art7Img } from 'assets/images/arts/art7.jpg';
 export { default as Art8Img } from 'assets/images/arts/art8.jpg';
-
-export const FAQS = [
-	{
-		id: 'faq1',
-		question: 'What is Bitcoin?',
-		answer:
-			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
-	},
-	{
-		id: 'faq2',
-		question: 'Who created Bitcoin?',
-		answer:
-			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
-	},
-	{
-		id: 'faq3',
-		question: 'Who controls the Bitcoin network?',
-		answer:
-			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
-	},
-	{
-		id: 'faq4',
-		question: 'How does Bitcoin work?',
-		answer:
-			'Bitcoin is a consensus network that enables a new payment system and a completely digital money. It is the first decentralized peer-to-peer payment network that is powered by its users with no central authority or middlemen.',
-	},
-];

@@ -16,7 +16,6 @@ import {
 } from './components';
 
 import {
-  FAQS,
   LogoImg,
   PhoneImg,
   DollarImg,
@@ -41,10 +40,10 @@ import {
 } from './constants';
 
 function App() {
-  const selectedFaqId = useSelectedFaqId('');
   const [navbarOpen, setNavbarOpen] = useNavbarOpen(false);
 
   useTooltips();
+  useSelectedFaqId('');
 
   const handleClickVaults = () => {
     setNavbarOpen(false);
@@ -953,30 +952,228 @@ function App() {
               <div className="col-12 col-lg-6 px-0">
                 <div className="panel-faq container-fluid px-0 px-lg-5">
                   <ul className="list-unstyled">
-                    {FAQS.map((faq) => (
-                      <li key={faq.id}>
-                        <div
-                          className="question-box d-flex align-items-center"
-                          data-bs-toggle="collapse"
-                          data-bs-target={`#faq-answer-${faq.id}`}
-                        >
-                          {faq.id === selectedFaqId && (
-                            <i className="bi bi-dash fs-3" />
-                          )}
-                          {faq.id !== selectedFaqId && (
-                            <i className="bi bi-plus fs-3" />
-                          )}
-                          <span>{faq.question}</span>
-                        </div>
-                        <div
-                          className="collapse"
-                          id={`faq-answer-${faq.id}`}
-                          data-faq-id={faq.id}
-                        >
-                          <p>{faq.answer}</p>
-                        </div>
-                      </li>
-                    ))}
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-1-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          How to add my $DOGEGF tokens in Metamask?
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-1-answer"
+                        data-faq-id="faq-1"
+                      >
+                        <p>
+                          If your $DOGEGF tokens don’t appear automatically in
+                          your wallet you have two options for solving this
+                          issue:
+                        </p>
+                        <ol>
+                          <li>
+                            Add a custom token in Metamask :
+                            <ul>
+                              <li>Click on the "ADD TOKEN" button</li>
+                              <li>Select "Custom Token" tab</li>
+                              <li>
+                                Paste the contract address from the first step
+                                to the "Token Address" field:
+                                0xfb130d93e49dca13264344966a611dc79a456bc5
+                              </li>
+                              <li>Click the "NEXT" button</li>
+                              <li>Click the "ADD TOKENS" button</li>
+                              <li>You are done!</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Add $DOGEGF directly from the Coingecko page or the
+                            CoinMarketcap page.
+                          </li>
+                        </ol>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-2-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          Will there be more burn events over time?
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-2-answer"
+                        data-faq-id="faq-2"
+                      >
+                        <p>
+                          Yes, $DOGEGF will reduce its supply over time meaning
+                          that it will burn tokens from circulation. Burned
+                          $DOGEGF tokens have already been sent to a Black Hole
+                          wallet which nobody has access to.
+                        </p>
+                        <p>
+                          Until now we performed 2 burn transactions which can
+                          be seen at the following link:{' '}
+                          <a
+                            href="https://etherscan.io/token/0xfb130d93e49dca13264344966a611dc79a456bc5?a=0xdead000000000000000042069420694206942069"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            https://etherscan.io/token/0xfb130d93e49dca13264344966a611dc79a456bc5?a=0xdead000000000000000042069420694206942069
+                          </a>
+                        </p>
+                        <p>More quarterly burns are planned for the future.</p>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-3-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          What is the difference between "Circulating Supply",
+                          "Total Supply", and "Max Supply"
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-3-answer"
+                        data-faq-id="faq-3"
+                      >
+                        <p>
+                          Circulating Supply is the best approximation of the
+                          number of coins that are circulating in the market and
+                          in the general public's hands.
+                          <br />
+                          Total Supply is the total amount of coins in existence
+                          right now (minus any coins that have been verifiably
+                          burned).
+                          <br />
+                          Max Supply is the best approximation of the maximum
+                          amount of coins that will ever exist in the lifetime
+                          of the cryptocurrency.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-4-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          Why does the MetaMask wallet doesn’t show the fiat
+                          value of my $DOGEGF tokens?
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-4-answer"
+                        data-faq-id="faq-4"
+                      >
+                        <p>
+                          Sometimes errors can occur, and this is a common
+                          problem when it comes to MetaMask.
+                          <br />
+                          There are multiple ways for checking the worth of your
+                          $DOGEGF tokens.
+                        </p>
+                        <ol>
+                          <li>
+                            Go to Uniswap and pretend you want to swap your
+                            $DOGEGF for a stablecoin like USDT.
+                          </li>
+                          <li>
+                            Use a portfolio tracker such as the Coingecko
+                            Portfolio Tracker.
+                          </li>
+                          <li>Check your balance on Etherscan.</li>
+                        </ol>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-5-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          What is the contract address?
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-5-answer"
+                        data-faq-id="faq-5"
+                      >
+                        <p>
+                          The contract address is
+                          0xfb130d93e49dca13264344966a611dc79a456bc5
+                        </p>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-6-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">What is slippage?</span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-6-answer"
+                        data-faq-id="faq-6"
+                      >
+                        <p>
+                          Slippage tolerance is a setting for the amount of
+                          price slippage you are willing to accept for a trade.
+                          By setting slippage tolerance, you basically are
+                          setting a minimum amount on how many tokens you will
+                          accept, in the event that the price increases or
+                          decreases.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="faq-box">
+                      <div
+                        className="question-box d-flex align-items-center"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-7-answer"
+                      >
+                        <i className="faq-icon bi bi-plus fs-3" />
+                        <span className="faq-title">
+                          Why do I have to pay fees?
+                        </span>
+                      </div>
+                      <div
+                        className="answer-box collapse"
+                        id="faq-7-answer"
+                        data-faq-id="faq-7"
+                      >
+                        <p>
+                          On the Ethereum blockchain, each transaction requires
+                          computational resources to execute and gas refers to
+                          the cost necessary to perform a transaction on the
+                          network. Miners set the price of gas based on supply
+                          and demand for the computational power of the network
+                          needed to process smart contracts and other
+                          transactions.
+                        </p>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>

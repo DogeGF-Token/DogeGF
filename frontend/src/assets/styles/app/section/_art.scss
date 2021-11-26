@@ -12,22 +12,9 @@
 		margin-bottom: 25px;
 	}
 
-	.art-box {
-		height: 250px;
-
-		img {
-			border-radius: 8px;
-		}
-	}
-
 	@include media-breakpoint-up(md) {
 		padding-left: 55px;
 		padding-right: 55px;
-
-		.art-box {
-			max-height: 800px;
-			height: subtract(100vh, 150px);
-		}
 	}
 
 	@include media-breakpoint-up(lg) {
@@ -42,32 +29,44 @@
 		}
 
 		.art-lg-container {
-			max-width: 1170px;
-
 			& > .row {
 				margin-right: -30px;
 				margin-bottom: -30px;
 
-				img {
-					border-radius: 8px;
+				.art-box {
+					width: subtract(100%, 30px);
+					height: subtract(50vmin, 30px);
+					padding: 1vmin;
 					margin-right: 30px;
 					margin-bottom: 30px;
 
-					width: subtract(100%, 30px);
-					height: subtract(100%, 30px);
+					border-radius: 8px;
+					box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
 				}
 
-				.col-art-1 {
-					@include make-col(40, 100);
+				img {
+					object-fit: contain;
+					cursor: pointer;
 				}
+			}
+		}
 
-				.col-art-2 {
-					@include make-col(25, 100);
-				}
+		.modal {
+			.slick-list {
+				border-radius: 30px;
+			}
 
-				.col-art-3 {
-					@include make-col(30, 100);
-				}
+			.art-box {
+				width: 100%;
+				height: 90vmin;
+				padding: 1vmin;
+
+				background: rgba(0, 0, 0, 0.8);
+				box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+			}
+
+			img {
+				object-fit: contain;
 			}
 		}
 	}

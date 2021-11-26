@@ -651,7 +651,7 @@ function App() {
                 Curated by the Dogegf Team
               </label>
               <h2 className="section-title">Community Art</h2>
-              <div className="container px-0 px-lg-5">
+              <div className="container-fluid px-0 px-lg-5">
                 <Slider
                   className="d-lg-none"
                   {...{
@@ -706,14 +706,111 @@ function App() {
                   </div>
                 </Slider>
 
-                <div className="art-lg-container container d-none d-lg-block">
+                <div className="art-lg-container container-fluid d-none d-lg-block">
                   <div className="row justify-content-center">
                     <div
-                      className="col col-art-1 px-0"
+                      className="col-3 px-0"
                       data-bs-toggle="modal"
                       data-bs-target="#artModal"
                     >
-                      <img src={Art1Img} alt="art-1" />
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art1Img}
+                          alt="art-1"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art2Img}
+                          alt="art-2"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art3Img}
+                          alt="art-3"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art4Img}
+                          alt="art-4"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art5Img}
+                          alt="art-5"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art6Img}
+                          alt="art-6"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art7Img}
+                          alt="art-7"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className="col-3 px-0"
+                      data-bs-toggle="modal"
+                      data-bs-target="#artModal"
+                    >
+                      <div className="art-box">
+                        <img
+                          className="w-100 h-100"
+                          src={Art8Img}
+                          alt="art-8"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -736,77 +833,61 @@ function App() {
                             ),
                           }}
                         >
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art1Img}
-                                alt="art-1"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art1Img}
+                              alt="art-1"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art2Img}
-                                alt="art-2"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art2Img}
+                              alt="art-2"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art3Img}
-                                alt="art-3"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art3Img}
+                              alt="art-3"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art4Img}
-                                alt="art-4"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art4Img}
+                              alt="art-4"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art5Img}
-                                alt="art-5"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art5Img}
+                              alt="art-5"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art6Img}
-                                alt="art-6"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art6Img}
+                              alt="art-6"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art7Img}
-                                alt="art-7"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art7Img}
+                              alt="art-7"
+                            />
                           </div>
-                          <div className="art-box container px-0">
-                            <div className="d-flex align-items-center justify-content-center h-100">
-                              <img
-                                className="w-100 h-100"
-                                src={Art8Img}
-                                alt="art-8"
-                              />
-                            </div>
+                          <div className="art-box">
+                            <img
+                              className="w-100 h-100"
+                              src={Art8Img}
+                              alt="art-8"
+                            />
                           </div>
                         </Slider>
                       </div>

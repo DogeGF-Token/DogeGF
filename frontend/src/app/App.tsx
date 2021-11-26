@@ -1,6 +1,6 @@
 import Slider from 'react-slick';
 
-import { useNavbarOpen, useSelectedFaqId, useTooltips } from './hooks';
+import { useNavbarOpen, useArt, useSelectedFaqId, useTooltips } from './hooks';
 
 import {
   BurgerIcon,
@@ -29,19 +29,12 @@ import {
   Blog2Img,
   Blog3Img,
   RocketmanImg,
-  Art1Img,
-  Art2Img,
-  Art3Img,
-  Art4Img,
-  Art5Img,
-  Art6Img,
-  Art7Img,
-  Art8Img,
+  ART_IMGS,
 } from './constants';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useNavbarOpen(false);
-
+  const [, setCurrentArtIndex, artMSlider, artDSlider] = useArt();
   useTooltips();
   useSelectedFaqId('');
 
@@ -652,6 +645,7 @@ function App() {
               <h2 className="section-title">Community Art</h2>
               <div className="container-fluid px-0 px-lg-5">
                 <Slider
+                  ref={artMSlider}
                   className="d-lg-none"
                   {...{
                     dots: true,
@@ -661,140 +655,40 @@ function App() {
                     arrows: true,
                     nextArrow: <SliderArrow type="art" direction="next" />,
                     prevArrow: <SliderArrow type="art" direction="prev" />,
+                    beforeChange: (current, next) => setCurrentArtIndex(next),
                   }}
                 >
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art1Img} alt="art-1" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art2Img} alt="art-2" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art3Img} alt="art-3" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art4Img} alt="art-4" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art5Img} alt="art-5" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art6Img} alt="art-6" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art7Img} alt="art-7" />
-                  </div>
-                  <div className="art-box">
-                    <img className="w-100 h-100" src={Art8Img} alt="art-8" />
-                  </div>
+                  {ART_IMGS.map((image, index) => (
+                    <div className="art-box">
+                      <img
+                        className="w-100 h-100"
+                        src={image}
+                        alt={`art-${index}`}
+                      />
+                    </div>
+                  ))}
                 </Slider>
 
                 <div className="art-lg-container container-fluid d-none d-lg-block">
                   <div className="row justify-content-center">
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art1Img}
-                          alt="art-1"
-                        />
+                    {ART_IMGS.map((image, index) => (
+                      <div
+                        className="col-3 px-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#artModal"
+                      >
+                        <div
+                          className="art-box"
+                          onClick={() => setCurrentArtIndex(index)}
+                        >
+                          <img
+                            className="w-100 h-100"
+                            src={image}
+                            alt={`art-${index}`}
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art2Img}
-                          alt="art-2"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art3Img}
-                          alt="art-3"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art4Img}
-                          alt="art-4"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art5Img}
-                          alt="art-5"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art6Img}
-                          alt="art-6"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art7Img}
-                          alt="art-7"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="col-3 px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#artModal"
-                    >
-                      <div className="art-box">
-                        <img
-                          className="w-100 h-100"
-                          src={Art8Img}
-                          alt="art-8"
-                        />
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
 
@@ -803,6 +697,7 @@ function App() {
                     <div className="modal-content bg-transparent border-0">
                       <div className="modal-body p-0">
                         <Slider
+                          ref={artDSlider}
                           {...{
                             infinite: true,
                             slidesToShow: 1,
@@ -814,64 +709,19 @@ function App() {
                             prevArrow: (
                               <SliderArrow type="art-modal" direction="prev" />
                             ),
+                            beforeChange: (current, next) =>
+                              setCurrentArtIndex(next),
                           }}
                         >
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art1Img}
-                              alt="art-1"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art2Img}
-                              alt="art-2"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art3Img}
-                              alt="art-3"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art4Img}
-                              alt="art-4"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art5Img}
-                              alt="art-5"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art6Img}
-                              alt="art-6"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art7Img}
-                              alt="art-7"
-                            />
-                          </div>
-                          <div className="art-box">
-                            <img
-                              className="w-100 h-100"
-                              src={Art8Img}
-                              alt="art-8"
-                            />
-                          </div>
+                          {ART_IMGS.map((image, index) => (
+                            <div className="art-box">
+                              <img
+                                className="w-100 h-100"
+                                src={image}
+                                alt={`art-${index}`}
+                              />
+                            </div>
+                          ))}
                         </Slider>
                       </div>
                     </div>

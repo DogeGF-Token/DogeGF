@@ -12,6 +12,16 @@
 		margin-bottom: 25px;
 	}
 
+	.art-box {
+		width: 100%;
+		height: 50vh;
+
+		img {
+			object-fit: contain;
+			cursor: pointer;
+		}
+	}
+
 	@include media-breakpoint-up(md) {
 		padding-left: 55px;
 		padding-right: 55px;
@@ -43,11 +53,6 @@
 					border-radius: 8px;
 					box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
 				}
-
-				img {
-					object-fit: contain;
-					cursor: pointer;
-				}
 			}
 		}
 
@@ -57,16 +62,11 @@
 			}
 
 			.art-box {
-				width: 100%;
 				height: 90vmin;
 				padding: 1vmin;
 
 				background: rgba(0, 0, 0, 0.8);
 				box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
-			}
-
-			img {
-				object-fit: contain;
 			}
 		}
 	}

@@ -663,45 +663,29 @@ function App() {
                     prevArrow: <SliderArrow type="art" direction="prev" />,
                   }}
                 >
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art1Img} alt="art-1" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art1Img} alt="art-1" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art2Img} alt="art-2" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art2Img} alt="art-2" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art3Img} alt="art-3" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art3Img} alt="art-3" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art4Img} alt="art-4" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art4Img} alt="art-4" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art5Img} alt="art-5" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art5Img} alt="art-5" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art6Img} alt="art-6" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art6Img} alt="art-6" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art7Img} alt="art-7" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art7Img} alt="art-7" />
                   </div>
-                  <div className="art-box container">
-                    <div className="d-flex align-items-center justify-content-center h-100">
-                      <img className="w-100 h-100" src={Art8Img} alt="art-8" />
-                    </div>
+                  <div className="art-box">
+                    <img className="w-100 h-100" src={Art8Img} alt="art-8" />
                   </div>
                 </Slider>
 

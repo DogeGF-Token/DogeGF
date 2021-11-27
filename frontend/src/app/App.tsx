@@ -352,14 +352,6 @@ function App() {
                           <i className="bi bi-check" />
                           <span>Community giveaways and contests</span>
                         </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Face recognized system</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>24/7 Full support</span>
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -378,23 +370,15 @@ function App() {
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coingecko listing</span>
+                          <span>Coingecko & Coinmarketcap listings</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coinmarketcap listing</span>
+                          <span>Community Events</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Litepaper</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Reaching out to influencers</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>1000 Holders</span>
+                          <span>First 1000 holders</span>
                         </li>
                       </ul>
                     </div>
@@ -410,11 +394,31 @@ function App() {
                       <ul className="list-unstyled">
                         <li>
                           <i className="bi bi-check" />
-                          <span>Prepare submission for contract audit</span>
+                          <span>Grow the team</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>DogeGT reward platform DogeGiFt</span>
+                          <span>Contract audit</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Community events</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Burn event</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Rebranding</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Polygon</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>First 5000 holders</span>
                         </li>
                       </ul>
                     </div>
@@ -430,23 +434,27 @@ function App() {
                       <ul className="list-unstyled">
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coming soon</span>
+                          <span>DogeGF reward platform for kind gestures</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coming soon</span>
+                          <span>DogeGF staking vaults</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coming soon</span>
+                          <span>Community events</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coming soon</span>
+                          <span>Burn events</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Coming soon</span>
+                          <span>First 100.000 holders</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Build, build, build</span>
                         </li>
                       </ul>
                     </div>
@@ -906,8 +914,8 @@ function App() {
                       >
                         <i className="faq-icon bi bi-plus fs-3" />
                         <span className="faq-title">
-                          Why does the MetaMask wallet doesn’t show the fiat
-                          value of my $DOGEGF tokens?
+                          Why doesn't the MetaMask wallet show the fiat value of
+                          my $DOGEGF tokens?
                         </span>
                       </div>
                       <div

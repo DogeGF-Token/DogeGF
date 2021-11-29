@@ -25,12 +25,10 @@ import {
   BurnImg,
   TeamImg,
   BrowserImg,
-  Blog1Img,
-  Blog2Img,
-  Blog3Img,
   RocketmanImg,
   ART_IMGS,
   ROADMAP_PHASES,
+  BLOGS,
 } from './constants';
 
 function App() {
@@ -486,38 +484,21 @@ function App() {
                     ],
                   }}
                 >
-                  <div className="blog-box container">
-                    <div className="d-flex flex-column">
-                      <img src={Blog1Img} alt="blog-1" />
-                      <span>June 20, 2021</span>
-                      <p>Reciprocity, the new experiment in crypto — part 1</p>
+                  {BLOGS.map((blog) => (
+                    <div className="blog-box container">
+                      <a
+                        href={blog.link}
+                        rel="noreferrer noopener"
+                        target="_blank"
+                      >
+                        <div className="d-flex flex-column">
+                          <img src={blog.img} alt="blog-1" />
+                          <span>{blog.date}</span>
+                          <p>{blog.title}</p>
+                        </div>
+                      </a>
                     </div>
-                  </div>
-                  <div className="blog-box container">
-                    <div className="d-flex flex-column">
-                      <img src={Blog2Img} alt="blog-1" />
-                      <span>May 25, 2021</span>
-                      <p>Reciprocity, the new experiment in crypto — part 1</p>
-                    </div>
-                  </div>
-                  <div className="blog-box container">
-                    <div className="d-flex flex-column">
-                      <img src={Blog3Img} alt="blog-1" />
-                      <span>August 20, 2021</span>
-                      <p>
-                        DogeGF is rewarding internet creators with kind gestures
-                      </p>
-                    </div>
-                  </div>
-                  <div className="blog-box container">
-                    <div className="d-flex flex-column">
-                      <img src={Blog3Img} alt="blog-1" />
-                      <span>August 20, 2021</span>
-                      <p>
-                        DogeGF is rewarding internet creators with kind gestures
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </Slider>
               </div>
             </div>

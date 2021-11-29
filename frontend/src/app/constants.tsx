@@ -7,9 +7,6 @@ export { default as AdImg } from 'assets/images/tokenomics/ad.png';
 export { default as BurnImg } from 'assets/images/tokenomics/burn.png';
 export { default as TeamImg } from 'assets/images/tokenomics/team.png';
 export { default as BrowserImg } from 'assets/images/browser.png';
-export { default as Blog1Img } from 'assets/images/blogs/blog1.png';
-export { default as Blog2Img } from 'assets/images/blogs/blog2.png';
-export { default as Blog3Img } from 'assets/images/blogs/blog3.png';
 export { default as RocketmanImg } from 'assets/images/rocketman.png';
 
 export const ART_IMGS = [
@@ -127,5 +124,38 @@ export const ROADMAP_PHASES = [
 				completed: false,
 			},
 		],
+	},
+];
+
+export const BLOGS = [
+	{
+		title: 'Meet DogeGF, the peer-to-peer coin of the new reciprocal society.',
+		date: 'May 25',
+		img: require('assets/images/blogs/blog1.png').default,
+		link: 'https://dogegf.medium.com/meet-dogegf-the-peer-to-peer-coin-of-the-new-reciprocal-society-463b7c9ab238',
+	},
+	{
+		title: 'Reciprocity, the new experiment in crypto — part 1.',
+		date: 'Jun 20',
+		img: require('assets/images/blogs/blog2.png').default,
+		link: 'https://dogegf.medium.com/reciprocity-the-new-experiment-in-crypto-part-1-e6da618aefa6',
+	},
+	{
+		title: 'DogeGF is rewarding internet creators with kind gestures',
+		date: 'Aug 20',
+		img: require('assets/images/blogs/blog3.png').default,
+		link: 'https://dogegf.medium.com/dogegf-is-rewarding-internet-creators-with-kind-gestures-ad5bc1f893c4',
+	},
+	{
+		title: 'DogeGF, the start of a new, true & kind crypto community',
+		date: 'Sep 26',
+		img: require('assets/images/blogs/blog4.png').default,
+		link: 'https://dogegf.medium.com/dogegf-the-start-of-a-new-true-kind-crypto-community-46a6e48a87ec',
+	},
+	{
+		title: 'Wallets Holding Locked DogeGF - Tokens Update',
+		date: 'Nov 22',
+		img: require('assets/images/blogs/blog5.png').default,
+		link: 'https://dogegf.medium.com/wallets-holding-locked-dogegf-tokens-update-7d51565b4005',
 	},
 ];

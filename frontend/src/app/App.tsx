@@ -34,14 +34,10 @@ import {
 } from './constants';
 
 function App() {
-  const [navbarOpen, setNavbarOpen] = useNavbarOpen(false);
+  const [navbarOpen] = useNavbarOpen(false);
   const [, setCurrentArtIndex, artMSlider, artDSlider] = useArt();
   useTooltips();
   useSelectedFaqId('');
-
-  const handleClickVaults = () => {
-    setNavbarOpen(false);
-  };
 
   const handleClickScrollTop = () => {
     window.scrollTo(0, 0);

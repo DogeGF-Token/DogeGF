@@ -19,15 +19,16 @@ const useNavbarOpen = (initialNavbarOpen: boolean) => {
 	}, []);
 
 	useEffect(() => {
+		const header = document.getElementById('header') as HTMLElement;
+
 		[].slice
-			.call(document.querySelectorAll('a'))
+			.call(header.querySelectorAll('a'))
 			.forEach((link: HTMLAnchorElement) => {
 				link.addEventListener('click', (e) => {
 					e.preventDefault();
 
 					setNavbarOpen(false);
 
-					const header = document.getElementById('header') as HTMLElement;
 					const target = document.querySelector(link.hash) as HTMLElement;
 
 					setTimeout(

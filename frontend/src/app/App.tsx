@@ -525,7 +525,7 @@ function App() {
                       </div>
                       <div className="flex-grow-1 d-flex flex-column w-lg-100">
                         <h3 className="tokenomic-title">
-                          Marketing & Community (66% Locked)
+                          Marketing & Community (50% Locked)
                         </h3>
                         <span className="tokenomic-description">15%</span>
                       </div>

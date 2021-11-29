@@ -753,12 +753,6 @@ function App() {
                         <h3 className="vaults-title">
                           Get rewards for providing liquidity
                         </h3>
-                        <p className="vaults-description">
-                          Facere dapibus nullam, exercitationem, vitae! Suscipit
-                          aliquet fringilla vestibulum ornare, asperiores.
-                          Condimentum? Officiis suscipit, id praesent dolorum
-                          iure
-                        </p>
                         <button className="btn btn-primary text-uppercase bg-white">
                           Coming Soon
                         </button>

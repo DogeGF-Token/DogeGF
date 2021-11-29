@@ -414,10 +414,6 @@ function App() {
                         </li>
                         <li>
                           <i className="bi bi-check" />
-                          <span>Polygon</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
                           <span>First 5000 holders</span>
                         </li>
                       </ul>
@@ -451,6 +447,10 @@ function App() {
                         <li>
                           <i className="bi bi-check" />
                           <span>First 100.000 holders</span>
+                        </li>
+                        <li>
+                          <i className="bi bi-check" />
+                          <span>Polygon</span>
                         </li>
                         <li>
                           <i className="bi bi-check" />

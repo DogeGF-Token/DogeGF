@@ -54,7 +54,7 @@ function App() {
         className="navbar navbar-expand-lg navbar-light position-sticky sticky-top bg-white"
       >
         <div className="navbar-container container-xxl h-100">
-          <a className="navbar-brand p-0 h-100" href="/#">
+          <a className="navbar-brand p-0 h-100" href="#home">
             <div className="d-flex align-items-center h-100">
               <img src={LogoImg} alt="dogegf-logo" />
             </div>
@@ -70,11 +70,6 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarContent">
             <ul className="navbar-nav mx-auto mb-4 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" href="#home">
-                  Home
-                </a>
-              </li>
               <li className="nav-item">
                 <a className="nav-link" href="#about">
                   About
@@ -116,16 +111,6 @@ function App() {
                 </a>
               </li>
             </ul>
-            <button
-              className="btn btn-outline-head border-2 text-uppercase"
-              type="button"
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              title="DogeGF vaults coming soon"
-              onClick={handleClickVaults}
-            >
-              DogeGF Vaults
-            </button>
           </div>
         </div>
       </nav>

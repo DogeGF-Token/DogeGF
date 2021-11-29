@@ -20,7 +20,7 @@ const useNavbarOpen = (initialNavbarOpen: boolean) => {
 
 	useEffect(() => {
 		[].slice
-			.call(document.querySelectorAll('.nav-link'))
+			.call(document.querySelectorAll('a'))
 			.forEach((link: HTMLAnchorElement) => {
 				link.addEventListener('click', (e) => {
 					e.preventDefault();

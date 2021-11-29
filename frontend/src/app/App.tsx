@@ -30,6 +30,7 @@ import {
   Blog3Img,
   RocketmanImg,
   ART_IMGS,
+  ROADMAP_PHASES,
 } from './constants';
 
 function App() {
@@ -332,134 +333,32 @@ function App() {
             <h2 className="section-title">Roadmap</h2>
             <div className="container-fluid px-0 px-lg-5">
               <div className="phase-list row mx-0">
-                <div className="col-12 col-md-6 col-xxl-3 px-0">
-                  <div className="phase-box">
-                    <div className="container d-flex flex-column">
-                      <h3 className="phase-title text-lg-center">Phase 1</h3>
-                      <label className="phase-season text-lg-center">
-                        Q2 2021
-                      </label>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Website launch</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Token launch</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Community giveaways and contests</span>
-                        </li>
-                      </ul>
+                {ROADMAP_PHASES.map((phase) => (
+                  <div className="col-12 col-md-6 col-xxl-3 px-0">
+                    <div className="phase-box">
+                      <div className="container d-flex flex-column">
+                        <h3 className="phase-title text-lg-center">
+                          {phase.title}
+                        </h3>
+                        <label className="phase-season text-lg-center">
+                          {phase.season}
+                        </label>
+                        <ul className="list-unstyled">
+                          {phase.items.map((item) => (
+                            <li>
+                              <i
+                                className={`bi bi-check ${
+                                  item.completed ? 'visible' : 'invisible'
+                                }`}
+                              />
+                              <span>{item.label}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-12 col-md-6 col-xxl-3 px-0">
-                  <div className="phase-box">
-                    <div className="container d-flex flex-column">
-                      <h3 className="phase-title text-lg-center">Phase 2</h3>
-                      <label className="phase-season text-lg-center">
-                        Q3 2021
-                      </label>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Groundwork for strong community</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Coingecko & Coinmarketcap listings</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Community Events</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>First 1000 holders</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-xxl-3 px-0">
-                  <div className="phase-box">
-                    <div className="container d-flex flex-column">
-                      <h3 className="phase-title text-lg-center">Phase 3</h3>
-                      <label className="phase-season text-lg-center">
-                        Q4 2021
-                      </label>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Grow the team</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Contract audit</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Community events</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Burn event</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Rebranding</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>First 5000 holders</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-xxl-3 px-0">
-                  <div className="phase-box">
-                    <div className="container d-flex flex-column">
-                      <h3 className="phase-title text-lg-center">Phase 4</h3>
-                      <label className="phase-season text-lg-center">
-                        Q1 2022
-                      </label>
-                      <ul className="list-unstyled">
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>DogeGF reward platform for kind gestures</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>DogeGF staking vaults</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Community events</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Burn events</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>First 100.000 holders</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Polygon</span>
-                        </li>
-                        <li>
-                          <i className="bi bi-check" />
-                          <span>Build, build, build</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

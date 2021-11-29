@@ -22,3 +22,110 @@ export const ART_IMGS = [
 	require('assets/images/arts/art7.jpg').default,
 	require('assets/images/arts/art8.jpg').default,
 ];
+
+export const ROADMAP_PHASES = [
+	{
+		title: 'Phase 1',
+		season: 'Q2 2021',
+		items: [
+			{
+				label: 'Website launch',
+				completed: true,
+			},
+			{
+				label: 'Token launch',
+				completed: true,
+			},
+			{
+				label: 'Community giveaways and contests',
+				completed: true,
+			},
+		],
+	},
+	{
+		title: 'Phase 2',
+		season: 'Q3 2021',
+		items: [
+			{
+				label: 'Groundwork for strong community',
+				completed: true,
+			},
+			{
+				label: 'Coingecko & Coinmarketcap listings',
+				completed: true,
+			},
+			{
+				label: 'Community Events',
+				completed: true,
+			},
+			{
+				label: 'First 1000 holders',
+				completed: true,
+			},
+		],
+	},
+	{
+		title: 'Phase 3',
+		season: 'Q4 2021',
+		items: [
+			{
+				label: 'Grow the team',
+				completed: true,
+			},
+			{
+				label: 'Contract audit',
+				completed: true,
+			},
+			{
+				label: 'Community events',
+				completed: true,
+			},
+			{
+				label: 'Burn event',
+				completed: true,
+			},
+			{
+				label: 'Rebranding',
+				completed: true,
+			},
+			{
+				label: 'Polygon',
+				completed: false,
+			},
+			{
+				label: 'First 5000 holders',
+				completed: true,
+			},
+		],
+	},
+	{
+		title: 'Phase 4',
+		season: 'Q1 2022',
+		items: [
+			{
+				label: 'DogeGF reward platform for kind gestures',
+				completed: false,
+			},
+			{
+				label: 'DogeGF staking vaults',
+				completed: false,
+			},
+			{
+				label: 'Community events',
+				completed: false,
+			},
+			{
+				label: 'Burn events',
+				completed: false,
+			},
+			{
+				label: 'First 100.000 holders',
+				completed: false,
+			},
+			{
+				label: 'Build, build, build',
+				completed: false,
+			},
+		],
+	},
+];

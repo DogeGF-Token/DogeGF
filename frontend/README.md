@@ -1,1 +1,0 @@
-# DogeGF Frontend

@@ -6,10 +6,11 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "nodemon": "^2.0.15",
     "web3": "^1.6.0"
   },
   "scripts": {
-    "start": "node ./index.js"
+    "start": "nodemon ./index.js"
   },
   "devDependencies": {
     "prettier": "^2.4.1"

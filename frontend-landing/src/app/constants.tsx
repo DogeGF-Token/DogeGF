@@ -9,17 +9,6 @@ export { default as TeamImg } from 'assets/images/tokenomics/team.png';
 export { default as BrowserImg } from 'assets/images/browser.png';
 export { default as RocketmanImg } from 'assets/images/rocketman.png';
 
-export const ART_IMGS = [
-	require('assets/images/arts/art1.jpg').default,
-	require('assets/images/arts/art2.jpg').default,
-	require('assets/images/arts/art3.jpg').default,
-	require('assets/images/arts/art4.jpg').default,
-	require('assets/images/arts/art5.jpg').default,
-	require('assets/images/arts/art6.jpg').default,
-	require('assets/images/arts/art7.jpg').default,
-	require('assets/images/arts/art8.jpg').default,
-];
-
 export const ROADMAP_PHASES = [
 	{
 		title: 'Phase 1',

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from 'app/constants';
+
 const query = `{
   faqCollection {
     items {
@@ -18,12 +20,12 @@ const useFaqs = (initialFaqs: any) => {
   useEffect(() => {
     axios
       .post(
-        'https://graphql.contentful.com/content/v1/spaces/7kpsd4jzl1w6/',
+        `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`,
         JSON.stringify({ query }),
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization: 'Bearer pfF4Xe-FjFXm2FB8Kws-4baQZsxwpVDMZR6nEgJoZ2Y',
+            Authorization: `Bearer ${CONTENTFUL_ACCESS_TOKEN}`,
           },
         }
       )

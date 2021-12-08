@@ -27,14 +27,13 @@ import {
   TeamImg,
   BrowserImg,
   RocketmanImg,
-  ART_IMGS,
   ROADMAP_PHASES,
   BLOGS,
 } from './constants';
 
 function App() {
   const [navbarOpen] = useNavbarOpen(false);
-  const [, setCurrentArtIndex, artMSlider, artDSlider] = useArt();
+  const [arts, , setCurrentArtIndex, artMSlider, artDSlider] = useArt([]);
   const [faqs] = useFaqs([]);
   useSelectedFaqId('');
 
@@ -531,11 +530,11 @@ function App() {
                     beforeChange: (current, next) => setCurrentArtIndex(next),
                   }}
                 >
-                  {ART_IMGS.map((image, index) => (
+                  {arts.map((art: any, index: number) => (
                     <div key={index} className="art-box">
                       <img
                         className="w-100 h-100"
-                        src={image}
+                        src={art.image.url}
                         alt={`art-${index}`}
                       />
                     </div>
@@ -544,7 +543,7 @@ function App() {
 
                 <div className="art-lg-container container-fluid d-none d-lg-block">
                   <div className="row justify-content-center">
-                    {ART_IMGS.map((image, index) => (
+                    {arts.map((art: any, index: number) => (
                       <div
                         key={index}
                         className="col-3 px-0"
@@ -557,7 +556,7 @@ function App() {
                         >
                           <img
                             className="w-100 h-100"
-                            src={image}
+                            src={art.image.url}
                             alt={`art-${index}`}
                           />
                         </div>
@@ -587,11 +586,11 @@ function App() {
                               setCurrentArtIndex(next),
                           }}
                         >
-                          {ART_IMGS.map((image, index) => (
+                          {arts.map((art: any, index: number) => (
                             <div key={index} className="art-box">
                               <img
                                 className="w-100 h-100"
-                                src={image}
+                                src={art.image.url}
                                 alt={`art-${index}`}
                               />
                             </div>

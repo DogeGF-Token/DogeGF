@@ -1,6 +1,6 @@
-export const CONTENTFUL_SPACE_ID = '7kpsd4jzl1w6';
+export const CONTENTFUL_SPACE_ID = 'um4jhlnkf8hs';
 export const CONTENTFUL_ACCESS_TOKEN =
-	'pfF4Xe-FjFXm2FB8Kws-4baQZsxwpVDMZR6nEgJoZ2Y';
+	'Ol_t5-inzHvjFaZKfzsvmeQRJgY_3nwe15wydxg_Kj4';
 
 export { default as LogoImg } from 'assets/images/logo.png';
 export { default as PhoneImg } from 'assets/images/phone.png';

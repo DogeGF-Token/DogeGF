@@ -1,8 +1,40 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import * as bootstrap from 'bootstrap';
 
-const useSelectedFaqId = (initialFaqId: string) => {
+import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from 'app/constants';
+
+const query = `{
+  faqCollection {
+    items {
+      question
+      answer {
+        json
+      }
+    } 
+  }
+}`;
+
+const useFaq = (initialFaqs: any, initialFaqId: string) => {
+	const [faqs, setFaqs] = useState(initialFaqs);
 	const [selectedFaqId, setSelectedFaqId] = useState(initialFaqId);
+
+	useEffect(() => {
+		axios
+			.post(
+				`https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}`,
+				JSON.stringify({ query }),
+				{
+					headers: {
+						'Content-Type': 'application/json',
+						Authorization: `Bearer ${CONTENTFUL_ACCESS_TOKEN}`,
+					},
+				}
+			)
+			.then((res) => {
+				setFaqs(res.data.data.faqCollection.items);
+			});
+	}, []);
 
 	useEffect(() => {
 		const faqSection = document.getElementById('faq') as HTMLElement;
@@ -24,7 +56,7 @@ const useSelectedFaqId = (initialFaqId: string) => {
 					});
 				});
 			});
-	}, []);
+	}, [faqs]);
 
 	useEffect(() => {
 		const faqSection = document.getElementById('faq') as HTMLElement;
@@ -47,6 +79,8 @@ const useSelectedFaqId = (initialFaqId: string) => {
 				}
 			});
 	}, [selectedFaqId]);
+
+	return [faqs, selectedFaqId];
 };
 
-export default useSelectedFaqId;
+export default useFaq;

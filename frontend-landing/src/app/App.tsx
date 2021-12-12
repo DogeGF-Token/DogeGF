@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import { useNavbarOpen, useArt, useSelectedFaqId, useFaqs } from './hooks';
+import { useNavbarOpen, useArt, useFaq } from './hooks';
 
 import {
   BurgerIcon,
@@ -34,8 +34,7 @@ import {
 function App() {
   const [navbarOpen] = useNavbarOpen(false);
   const [arts, , setCurrentArtIndex, artMSlider, artDSlider] = useArt([]);
-  const [faqs] = useFaqs([]);
-  useSelectedFaqId('');
+  const [faqs] = useFaq([], '');
 
   const handleClickScrollTop = () => {
     window.scrollTo(0, 0);

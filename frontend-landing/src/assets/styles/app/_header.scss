@@ -61,19 +61,11 @@
 		}
 
 		.nav-link {
-			padding: 7px;
-
-			font-size: 14px;
-			line-height: 18px;
-			text-align: center;
-		}
-	}
-
-	@include media-breakpoint-up(xl) {
-		.nav-link {
-			padding: 8px;
+			padding: 16px;
 
 			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
 		}
 	}
 

@@ -62,7 +62,7 @@ function App() {
             {navbarOpen && <CloseIcon />}
           </button>
           <div className="collapse navbar-collapse" id="navbarContent">
-            <ul className="navbar-nav mx-auto mb-4 mb-lg-0">
+            <ul className="navbar-nav mx-auto me-xxl-0 mb-4 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link" href="#about">
                   About

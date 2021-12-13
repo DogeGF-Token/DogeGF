@@ -115,7 +115,7 @@ function App() {
               <div className="row h-100">
                 <div className="col col-lg-7 px-0">
                   <div className="panel-text container h-100 p-0 ms-0 ms-lg-5 ms-xxl-auto me-lg-0">
-                    <div className="d-flex flex-column justify-content-lg-center h-100">
+                    <div className="d-flex flex-column justify-content-lg-center h-75">
                       <label className="section-label">
                         DOGEGF IN A NUTSHELL
                       </label>

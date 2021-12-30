@@ -80,7 +80,7 @@ export const ROADMAP_PHASES = [
 			},
 			{
 				label: 'Polygon',
-				completed: false,
+				completed: true,
 			},
 			{
 				label: 'First 5000 holders',

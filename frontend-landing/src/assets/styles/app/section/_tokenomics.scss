@@ -77,11 +77,16 @@
 		font-style: normal;
 		font-weight: normal;
 		font-size: 14px;
-		line-height: 26px;
-
-		word-break: break-all;
-
+		line-height: 23px;
 		color: var(--bs-normal);
+	}
+
+	.btn-view {
+		padding: 2px 8px;
+		background: #01213a;
+		border-radius: 10px;
+		color: white;
+		text-decoration: none;
 	}
 
 	@include media-breakpoint-up(md) {
@@ -125,13 +130,12 @@
 
 		.tokenomic-box {
 			width: 270px;
-			height: 270px;
 			margin-bottom: 33px;
 			margin-right: 31px;
 			padding-top: 50px;
 			padding-left: 42px;
 			padding-right: 27px;
-			padding-bottom: 0;
+			padding-bottom: 22px;
 		}
 
 		.tokenomic-icon {

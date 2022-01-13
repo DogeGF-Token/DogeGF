@@ -1,23 +1,7 @@
-import Slider from 'react-slick';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
-import { useNavbarOpen, useArt, useFaq } from './hooks';
-
+import Slider from "react-slick";
+import { useArt, useFaq, useTooltip } from "./hooks";
+import { SliderArrow, CopyIcon } from "./components";
 import {
-  BurgerIcon,
-  CloseIcon,
-  TwitterIcon,
-  DiscordIcon,
-  TelegramIcon,
-  MediumIcon,
-  RedditIcon,
-  InstagramIcon,
-  TiktokIcon,
-  SliderArrow,
-} from './components';
-
-import {
-  LogoImg,
   PhoneImg,
   DollarImg,
   LockImg,
@@ -29,84 +13,50 @@ import {
   RocketmanImg,
   ROADMAP_PHASES,
   BLOGS,
-} from './constants';
+  AuditImg,
+} from "./constants";
+
+import RoadmapPhase from "./components/Landing/RoadmapPhase";
+import Blog from "./components/Landing/Blog";
+import Art from "./components/Landing/Art";
+import Faq from "./components/Landing/Faq";
+import NavBar from "./components/Landing/NavBar";
+import Footer from "./components/Landing/Footer";
+import Tokenomics, { TokenomicsData } from "./components/Landing/Tokenomics";
 
 function App() {
-  const [navbarOpen] = useNavbarOpen(false);
+  const tokenomics: TokenomicsData[] = [
+    { img: DollarImg, title: "Token Symbol", description: "$DOGEGF" },
+    {
+      img: LockImg,
+      title: "Locked Liquidity in Uniswap & Sushiswap",
+      description: "25%",
+    },
+    {
+      img: TotalImg,
+      title: "Total Supply",
+      description: "69,420,000,000,000,000",
+    },
+    {
+      img: AdImg,
+      title: "Marketing & Community (50% Locked)",
+      description: "15%",
+    },
+    { img: BurnImg, title: "Burned Supply", description: "50%" },
+    { img: TeamImg, title: "Team Wallet (Locked)", description: "10%" },
+  ];
+  const contractAddress = "0xfb130d93e49dca13264344966a611dc79a456bc5";
   const [arts, , setCurrentArtIndex, artMSlider, artDSlider] = useArt([]);
-  const [faqs] = useFaq([], '');
+  const [faqs] = useFaq([], "");
+  const [setTitle] = useTooltip("Copy to Clipboard");
 
-  const handleClickScrollTop = () => {
-    window.scrollTo(0, 0);
+  const copyAddress = () => {
+    navigator.clipboard.writeText(contractAddress);
   };
 
   return (
     <div>
-      <nav
-        id="header"
-        className="navbar navbar-expand-lg navbar-light position-sticky sticky-top bg-white"
-      >
-        <div className="navbar-container container-xxl h-100">
-          <a className="navbar-brand p-0 h-100" href="#home">
-            <div className="d-flex align-items-center h-100">
-              <img src={LogoImg} alt="dogegf-logo" />
-            </div>
-          </a>
-          <button
-            className="navbar-toggler p-1"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
-          >
-            {!navbarOpen && <BurgerIcon />}
-            {navbarOpen && <CloseIcon />}
-          </button>
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <ul className="navbar-nav mx-auto me-xxl-0 mb-4 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#how-to-buy">
-                  How to Buy
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#roadmap">
-                  Roadmap
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#tokenomics">
-                  Tokenomics
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#blog">
-                  Blog
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#art">
-                  Art
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#vaults">
-                  DogeGF Vaults
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#faq">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
 
       <div id="content" className="container-xxl px-0">
         <div id="home" className="container-fluid">
@@ -152,7 +102,16 @@ function App() {
                 <div className="panel-text container-fluid px-0 h-100">
                   <div className="d-flex flex-column">
                     <label className="section-label">Tutorial</label>
-                    <h2 className="section-title">How to buy $DOGEGF</h2>
+                    <h2 className="section-title mb-0">How to buy $DOGEGF</h2>
+                    <p className="my-4 ms-0 step-description">
+                      $DOGEGF is now available for trading on the Polygon
+                      network where there are lower transactions fees. For
+                      purchasing on the Polygon network follow the steps from
+                      this{" "}
+                      <span className="text-decoration-underline">article</span>
+                      . For purchasing on the Ethereum network follow the steps
+                      below.
+                    </p>
                     <ul className="list-unstyled">
                       <li>
                         <div className="step d-flex align-items-center flex-wrap">
@@ -164,24 +123,24 @@ function App() {
                         <p className="step-description">
                           $DOGEGF token is available on the Ethereum blockchain.
                           MetaMask is the market leader in ERC20 (Ethereum)
-                          wallets. On Google Chrome, visit{' '}
+                          wallets. On Google Chrome, visit{" "}
                           <a
                             href="https://metamask.io/"
                             rel="noreferrer noopener"
                             target="_blank"
                           >
                             metamask.io
-                          </a>{' '}
+                          </a>{" "}
                           to download the extension and set up a wallet. On
-                          mobile? Get MetaMask's app for{' '}
+                          mobile? Get MetaMask's app for{" "}
                           <a
                             href="https://metamask.app.link/skAH3BaF99"
                             rel="noreferrer noopener"
                             target="_blank"
                           >
                             iPhone
-                          </a>{' '}
-                          or{' '}
+                          </a>{" "}
+                          or{" "}
                           <a
                             href="https://metamask.app.link/bxwkE8oF99"
                             rel="noreferrer noopener"
@@ -213,15 +172,15 @@ function App() {
                           </h3>
                         </div>
                         <p className="step-description">
-                          You can currently buy $DOGEGF on{' '}
+                          You can currently buy $DOGEGF on{" "}
                           <a
                             href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5"
                             rel="noreferrer noopener"
                             target="_blank"
                           >
                             Uniswap
-                          </a>{' '}
-                          or{' '}
+                          </a>{" "}
+                          or{" "}
                           <a
                             href="https://app.sushi.com/swap?inputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5"
                             rel="noreferrer noopener"
@@ -230,7 +189,15 @@ function App() {
                             Sushiswap
                           </a>
                           . Be carefull to use only and only this contract
-                          adress: 0xfb130d93e49dca13264344966a611dc79a456bc5
+                          address: {contractAddress}
+                          <span id="tooltipContent">
+                            <CopyIcon
+                              styles={{ marginLeft: "5px", cursor: "pointer" }}
+                              onClick={() => copyAddress()}
+                              width={15}
+                              height={15}
+                            />
+                          </span>
                         </p>
                       </li>
                       <li>
@@ -257,7 +224,7 @@ function App() {
                           succesfully we recommend you to pay at least the
                           average gas price and set an appropriate slippage
                           tolerance depending on the volatility at the moment of
-                          your transaction. Gas prices can be checked on{' '}
+                          your transaction. Gas prices can be checked on{" "}
                           <a
                             href="https://etherscan.io/gastracker#historicaldata"
                             rel="noreferrer noopener"
@@ -311,34 +278,13 @@ function App() {
             <h2 className="section-title">Roadmap</h2>
             <div className="container-fluid px-0 px-lg-5">
               <div className="phase-list row mx-0">
-                {ROADMAP_PHASES.map((phase) => (
-                  <div
-                    key={phase.title}
-                    className="col-12 col-md-6 col-xxl-3 px-0"
-                  >
-                    <div className="phase-box">
-                      <div className="container d-flex flex-column">
-                        <h3 className="phase-title text-lg-center">
-                          {phase.title}
-                        </h3>
-                        <label className="phase-season text-lg-center">
-                          {phase.season}
-                        </label>
-                        <ul className="list-unstyled">
-                          {phase.items.map((item, index) => (
-                            <li key={index}>
-                              <i
-                                className={`bi bi-check ${
-                                  item.completed ? 'visible' : 'invisible'
-                                }`}
-                              />
-                              <span>{item.label}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                {ROADMAP_PHASES.map((phase, index) => (
+                  <RoadmapPhase
+                    key={index}
+                    title={phase.title}
+                    season={phase.season}
+                    items={phase.items}
+                  />
                 ))}
               </div>
             </div>
@@ -354,88 +300,42 @@ function App() {
             <h2 className="section-title">Tokenomics</h2>
             <div className="container-fluid px-0">
               <div className="tokenomics-list row">
+                {tokenomics.map((tokenomic, index) => (
+                  <Tokenomics
+                    key={index}
+                    index={index}
+                    img={tokenomic.img}
+                    title={tokenomic.title}
+                    description={tokenomic.description}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 d-flex flex-column align-items-center">
+            <label className="section-label mt-4">Trust</label>
+            <div className="container-fluid px-0">
+              <div className="tokenomics-list row d-flex justify-content-center">
                 <div className="col-12 col-md-6 col-lg-4 px-0">
                   <div className="tokenomic-box container-fluid">
                     <div className="d-flex align-items-center flex-lg-wrap">
                       <div className="tokenomic-icon tokenomic-icon-1 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={DollarImg} alt="tokenomic-dollar" />
+                        <img src={AuditImg} alt="tokenomic-team" />
                       </div>
                       <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">Token Symbol</h3>
-                        <span className="tokenomic-description">$DOGEGF</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-4 px-0">
-                  <div className="tokenomic-box container-fluid">
-                    <div className="d-flex align-items-center flex-lg-wrap">
-                      <div className="tokenomic-icon tokenomic-icon-2 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={LockImg} alt="tokenomic-lock" />
-                      </div>
-                      <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">
-                          Locked Liquidity in Uniswap & Sushiswap
-                        </h3>
-                        <span className="tokenomic-description">25%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-4 px-0">
-                  <div className="tokenomic-box container-fluid">
-                    <div className="d-flex align-items-center flex-lg-wrap">
-                      <div className="tokenomic-icon tokenomic-icon-3 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={TotalImg} alt="tokenomic-total" />
-                      </div>
-                      <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">Total Supply</h3>
+                        <h3 className="tokenomic-title">Audit</h3>
                         <span className="tokenomic-description">
-                          69,420,000,000,000,000
+                          The DogeGF contract has been audited by Solidity
+                          finance.
+                          <a
+                            href="https://solidity.finance/audits/DogeGF/"
+                            target="_blank"
+                            className="btn-view"
+                            rel="noreferrer"
+                          >
+                            View
+                          </a>
                         </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-4 px-0">
-                  <div className="tokenomic-box container-fluid">
-                    <div className="d-flex align-items-center flex-lg-wrap">
-                      <div className="tokenomic-icon tokenomic-icon-4 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={AdImg} alt="tokenomic-ad" />
-                      </div>
-                      <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">
-                          Marketing & Community (50% Locked)
-                        </h3>
-                        <span className="tokenomic-description">15%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-4 px-0">
-                  <div className="tokenomic-box container-fluid">
-                    <div className="d-flex align-items-center flex-lg-wrap">
-                      <div className="tokenomic-icon tokenomic-icon-5 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={BurnImg} alt="tokenomic-burn" />
-                      </div>
-                      <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">Burned Supply</h3>
-                        <span className="tokenomic-description">50%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 col-lg-4 px-0">
-                  <div className="tokenomic-box container-fluid">
-                    <div className="d-flex align-items-center flex-lg-wrap">
-                      <div className="tokenomic-icon tokenomic-icon-6 flex-shrink-0 d-flex align-items-center justify-content-center">
-                        <img src={TeamImg} alt="tokenomic-team" />
-                      </div>
-                      <div className="flex-grow-1 d-flex flex-column w-lg-100">
-                        <h3 className="tokenomic-title">
-                          Team Wallet (Locked)
-                        </h3>
-                        <span className="tokenomic-description">10%</span>
                       </div>
                     </div>
                   </div>
@@ -486,20 +386,14 @@ function App() {
                     ],
                   }}
                 >
-                  {BLOGS.map((blog) => (
-                    <div key={blog.title} className="blog-box container">
-                      <a
-                        href={blog.link}
-                        rel="noreferrer noopener"
-                        target="_blank"
-                      >
-                        <div className="d-flex flex-column">
-                          <img src={blog.img} alt="blog-1" />
-                          <span>{blog.date}</span>
-                          <p>{blog.title}</p>
-                        </div>
-                      </a>
-                    </div>
+                  {BLOGS.map((blog, index) => (
+                    <Blog
+                      key={index}
+                      title={blog.title}
+                      date={blog.date}
+                      img={blog.img}
+                      link={blog.link}
+                    />
                   ))}
                 </Slider>
               </div>
@@ -530,36 +424,26 @@ function App() {
                   }}
                 >
                   {arts.map((art: any, index: number) => (
-                    <div key={index} className="art-box">
-                      <img
-                        className="w-100 h-100"
-                        src={art.image.url}
-                        alt={`art-${index}`}
-                      />
-                    </div>
+                    <Art
+                      key={index}
+                      index={index}
+                      art={art}
+                      clickable={false}
+                      onClick={() => null}
+                    />
                   ))}
                 </Slider>
 
                 <div className="art-lg-container container-fluid d-none d-lg-block">
                   <div className="row justify-content-center">
                     {arts.map((art: any, index: number) => (
-                      <div
+                      <Art
                         key={index}
-                        className="col-3 px-0"
-                        data-bs-toggle="modal"
-                        data-bs-target="#artModal"
-                      >
-                        <div
-                          className="art-box"
-                          onClick={() => setCurrentArtIndex(index)}
-                        >
-                          <img
-                            className="w-100 h-100"
-                            src={art.image.url}
-                            alt={`art-${index}`}
-                          />
-                        </div>
-                      </div>
+                        art={art}
+                        index={index}
+                        clickable={true}
+                        onClick={() => setCurrentArtIndex(index)}
+                      />
                     ))}
                   </div>
                 </div>
@@ -653,23 +537,7 @@ function App() {
                 <div className="panel-faq container-fluid px-0 px-lg-5">
                   <ul className="list-unstyled">
                     {faqs.map((faq: any, index: number) => (
-                      <li key={index} className="faq-box">
-                        <div
-                          className="question-box d-flex align-items-center"
-                          data-bs-toggle="collapse"
-                          data-bs-target={`#faq-${index}-answer`}
-                        >
-                          <i className="faq-icon bi bi-plus fs-3" />
-                          <span className="faq-title">{faq.question}</span>
-                        </div>
-                        <div
-                          className="answer-box collapse"
-                          id={`faq-${index}-answer`}
-                          data-faq-id={`faq-${index}`}
-                        >
-                          {documentToReactComponents(faq.answer.json)}
-                        </div>
-                      </li>
+                      <Faq key={index} faq={faq} index={index} />
                     ))}
                   </ul>
                 </div>
@@ -679,81 +547,7 @@ function App() {
         </div>
       </div>
 
-      <div id="footer" className="container-fluid px-3 px-sm-5">
-        <div className="footer-content container-fluid">
-          <div className="row justify-content-around">
-            <div className="col-12 col-lg-4 order-lg-1 px-0">
-              <div className="panel-email d-flex justify-content-center align-items-center mb-lg-0">
-                Contact us: dogegf@dogegf.com
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-3 px-0">
-              <div className="panel-social d-flex align-items-center justify-content-center mb-lg-0">
-                <a
-                  href="https://twitter.com/dogegftoken"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  href="https://discord.com/invite/EwKuFDCA5V"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <DiscordIcon />
-                </a>
-                <a
-                  href="https://t.me/DogeGF_Official"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <TelegramIcon />
-                </a>
-                <a
-                  href="https://dogegf.medium.com/"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <MediumIcon />
-                </a>
-                <a
-                  href="https://www.reddit.com/r/dogegf/"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <RedditIcon />
-                </a>
-                <a
-                  href="https://www.instagram.com/dogegf/"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <InstagramIcon />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@dogegf"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <TiktokIcon />
-                </a>
-              </div>
-            </div>
-            <div className="col-12 col-lg-4 order-lg-2 px-0">
-              <div className="panel-copyright d-flex justify-content-center align-items-center h-100">
-                All Rights Reserved © DogeGF
-              </div>
-            </div>
-          </div>
-          <button
-            className="btn btn-outline-dark p-0"
-            onClick={handleClickScrollTop}
-          >
-            <i className="bi bi-arrow-up fs-5" />
-          </button>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

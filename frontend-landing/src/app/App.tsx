@@ -108,7 +108,13 @@ function App() {
                       network where there are lower transactions fees. For
                       purchasing on the Polygon network follow the steps from
                       this{" "}
-                      <span className="text-decoration-underline">article</span>
+                      <a
+                        href="https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        article
+                      </a>
                       . For purchasing on the Ethereum network follow the steps
                       below.
                     </p>
@@ -312,8 +318,14 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="mt-4 d-flex flex-column align-items-center">
-            <label className="section-label mt-4">Trust</label>
+        </div>
+
+        <div
+          id="tokenomics"
+          className="container-fluid px-lg-0 ms-0 ms-lg-auto"
+        >
+          <div className="d-flex flex-column align-items-center">
+            <label className="section-label">Trust</label>
             <div className="container-fluid px-0">
               <div className="tokenomics-list row d-flex justify-content-center">
                 <div className="col-12 col-md-6 col-lg-4 px-0">
@@ -330,7 +342,7 @@ function App() {
                           <a
                             href="https://solidity.finance/audits/DogeGF/"
                             target="_blank"
-                            className="btn-view"
+                            className="btn-view ms-3"
                             rel="noreferrer"
                           >
                             View

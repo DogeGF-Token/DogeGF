@@ -33,6 +33,14 @@ export { default as EtherscanImg } from "assets/icons/etherscan.png";
 export { default as PolygonImg } from "assets/icons/polygon.png";
 export { default as CoingeckoImg } from "assets/icons/coingecko.png";
 export { default as CoinmarketcapImg } from "assets/icons/coinmarketcap.png";
+export { default as GithubImg } from "assets/icons/github.png";
+export { default as DiscordImg } from "assets/icons/discord.png";
+export { default as TwitterImg } from "assets/icons/twitter.png";
+export { default as TelegramImg } from "assets/icons/telegram.png";
+export { default as MediumImg } from "assets/icons/medium.png";
+export { default as RedditImg } from "assets/icons/reddit.png";
+export { default as InstagramImg } from "assets/icons/instagram.png";
+export { default as TiktokImg } from "assets/icons/tiktok.png";
 
 export const HEADER_LINKS = [
   {
@@ -265,6 +273,12 @@ export const BLOGS = [
     link: "https://dogegf.medium.com/dogegf-the-start-of-a-new-true-kind-crypto-community-46a6e48a87ec",
   },
   {
+    title: "Burn announcement",
+    date: "Oct 13",
+    img: require("assets/images/blogs/blog6.png").default,
+    link: "https://dogegf.medium.com/dogegf-burn-announcement-988a53621a25",
+  },
+  {
     title: "Wallets Holding Locked DogeGF - Tokens Update",
     date: "Nov 22",
     img: require("assets/images/blogs/blog5.png").default,
@@ -272,14 +286,8 @@ export const BLOGS = [
   },
   {
     title: "Polygon",
-    date: "Nov 22",
-    img: require("assets/images/blogs/blog1.png").default,
+    date: "Dec 30",
+    img: require("assets/images/blogs/blog7.png").default,
     link: "https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a",
-  },
-  {
-    title: "Burn announcement",
-    date: "Nov 22",
-    img: require("assets/images/blogs/blog2.png").default,
-    link: "https://dogegf.medium.com/dogegf-burn-announcement-988a53621a25",
   },
 ];

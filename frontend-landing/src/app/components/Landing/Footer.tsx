@@ -2,10 +2,6 @@ import FooterIcon from "./FooterIcon";
 import { FOOTER_LINKS } from "app/constants";
 
 const Footer = () => {
-  const handleClickScrollTop = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div id="footer" className="container-fluid px-3 px-sm-5">
       <div className="footer-content container-fluid">
@@ -33,12 +29,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <button
-          className="btn btn-outline-dark p-0"
-          onClick={handleClickScrollTop}
-        >
-          <i className="bi bi-arrow-up fs-5" />
-        </button>
       </div>
     </div>
   );

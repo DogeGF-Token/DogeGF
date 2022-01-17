@@ -1,3 +1,37 @@
+.scroll-to-top {
+	position: fixed;
+	bottom: 46px;
+	right: 35px;
+
+	.btn {
+		width: 35px;
+		height: 35px;
+		border-radius: 99999px;
+		border-width: 2px;
+		background-color: white;
+
+		&:hover {
+			background-color: #212529;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.btn {
+			top: -23px;
+			right: 45px;
+			width: 45px;
+			height: 45px;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.btn {
+			top: subtract(50%, 23px);
+			right: -7%;
+		}
+	}
+}
+
 #footer {
 	margin-bottom: 80px;
 
@@ -43,29 +77,11 @@
 		color: var(--bs-normal);
 	}
 
-	.btn {
-		position: absolute;
-		top: -18px;
-		right: 35px;
-		width: 35px;
-		height: 35px;
-
-		border-radius: 99999px;
-		border-width: 2px;
-	}
-
 	@include media-breakpoint-up(md) {
 		margin-bottom: 53px;
 
 		.footer-content {
 			padding: 50px;
-		}
-
-		.btn {
-			top: -23px;
-			right: 45px;
-			width: 45px;
-			height: 45px;
 		}
 	}
 
@@ -76,11 +92,6 @@
 
 		.footer-content {
 			padding: 52px;
-		}
-
-		.btn {
-			top: subtract(50%, 23px);
-			right: -7%;
 		}
 	}
 

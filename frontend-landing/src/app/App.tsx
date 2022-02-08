@@ -103,22 +103,7 @@ function App() {
                   <div className="d-flex flex-column">
                     <label className="section-label">Tutorial</label>
                     <h2 className="section-title mb-0">How to buy $DOGEGF</h2>
-                    <p className="my-4 ms-0 step-description">
-                      $DOGEGF is now available for trading on the Polygon
-                      network where there are lower transactions fees. For
-                      purchasing on the Polygon network follow the steps from
-                      this{" "}
-                      <a
-                        href="https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        article
-                      </a>
-                      . For purchasing on the Ethereum network follow the steps
-                      below.
-                    </p>
-                    <ul className="list-unstyled">
+                    <ul className="list-unstyled mt-4">
                       <li>
                         <div className="step d-flex align-items-center flex-wrap">
                           <span className="step-label mb-md-0">1</span>

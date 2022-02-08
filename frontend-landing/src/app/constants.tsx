@@ -8,7 +8,7 @@ import {
   TiktokIcon,
   GithubIcon,
   EtherscanIcon,
-  PolygonIcon,
+  // PolygonIcon,
   CoingeckoIcon,
   CoinmarketcapIcon,
 } from "./components";
@@ -118,11 +118,11 @@ export const FOOTER_LINKS = [
     children: <EtherscanIcon />,
     target: "_blank",
   },
-  {
-    link: "https://polygonscan.com/token/0x0e7252706393470ffb0629da2caa39fc9340f2d4",
-    children: <PolygonIcon />,
-    target: "_blank",
-  },
+  // {
+  //   link: "https://polygonscan.com/token/0x0e7252706393470ffb0629da2caa39fc9340f2d4",
+  //   children: <PolygonIcon />,
+  //   target: "_blank",
+  // },
   {
     link: "https://www.coingecko.com/en/coins/dogegf",
     children: <CoingeckoIcon />,
@@ -205,10 +205,10 @@ export const ROADMAP_PHASES = [
         label: "Rebranding",
         completed: true,
       },
-      {
-        label: "Polygon",
-        completed: true,
-      },
+      // {
+      //   label: "Polygon",
+      //   completed: true,
+      // },
       {
         label: "First 5000 holders",
         completed: true,
@@ -284,10 +284,10 @@ export const BLOGS = [
     img: require("assets/images/blogs/blog5.png").default,
     link: "https://dogegf.medium.com/wallets-holding-locked-dogegf-tokens-update-7d51565b4005",
   },
-  {
-    title: "Polygon",
-    date: "Dec 30",
-    img: require("assets/images/blogs/blog7.png").default,
-    link: "https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a",
-  },
+  // {
+  //   title: "Polygon",
+  //   date: "Dec 30",
+  //   img: require("assets/images/blogs/blog7.png").default,
+  //   link: "https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a",
+  // },
 ];

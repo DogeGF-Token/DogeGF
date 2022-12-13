@@ -143,7 +143,7 @@ export const FOOTER_LINKS = [
 export const ROADMAP_PHASES = [
   {
     title: "Phase 1",
-    season: "Q2 2021",
+    season: "",
     items: [
       {
         label: "Website launch",
@@ -161,7 +161,7 @@ export const ROADMAP_PHASES = [
   },
   {
     title: "Phase 2",
-    season: "Q3 2021",
+    season: "",
     items: [
       {
         label: "Groundwork for strong community",
@@ -183,7 +183,7 @@ export const ROADMAP_PHASES = [
   },
   {
     title: "Phase 3",
-    season: "Q4 2021",
+    season: "",
     items: [
       {
         label: "Grow the team",
@@ -217,7 +217,7 @@ export const ROADMAP_PHASES = [
   },
   {
     title: "Phase 4",
-    season: "Q1 2022",
+    season: "",
     items: [
       {
         label: "DogeGF reward platform for kind gestures",
@@ -225,6 +225,14 @@ export const ROADMAP_PHASES = [
       },
       {
         label: "DogeGF staking vaults",
+        completed: false,
+      },
+      {
+        label: "DogeGF's first bear market",
+        completed: true,
+      },
+      {
+        label: "Community events",
         completed: false,
       },
       {

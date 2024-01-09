@@ -233,7 +233,7 @@ export const ROADMAP_PHASES = [
       },
       {
         label: "Community events",
-        completed: false,
+        completed: true,
       },
       {
         label: "Burn events",

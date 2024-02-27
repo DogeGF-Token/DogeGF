@@ -39,11 +39,10 @@ function App() {
     },
     {
       img: AdImg,
-      title: "Marketing & Community (50% Locked)",
-      description: "15%",
+      title: "Marketing & Community",
+      description: "10%",
     },
-    { img: BurnImg, title: "Burned Supply", description: "50%" },
-    { img: TeamImg, title: "Team Wallet (Locked)", description: "10%" },
+    { img: BurnImg, title: "Burned Supply", description: "53%" },
   ];
   const contractAddress = "0xfb130d93e49dca13264344966a611dc79a456bc5";
   const [arts, , setCurrentArtIndex, artMSlider, artDSlider] = useArt([]);

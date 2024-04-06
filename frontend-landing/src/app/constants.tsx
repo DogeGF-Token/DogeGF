@@ -228,8 +228,8 @@ export const ROADMAP_PHASES = [
         completed: false,
       },
       {
-        label: "DogeGF's first bear market",
-        completed: true,
+        label: "Community quests",
+        completed: false,
       },
       {
         label: "Community events",
@@ -237,7 +237,11 @@ export const ROADMAP_PHASES = [
       },
       {
         label: "Burn events",
-        completed: false,
+        completed: true,
+      },
+      {
+        label: "Based",
+        completed: true,
       },
       {
         label: "First 100.000 holders",

@@ -8,7 +8,6 @@ import {
   TotalImg,
   AdImg,
   BurnImg,
-  TeamImg,
   BrowserImg,
   RocketmanImg,
   ROADMAP_PHASES,
@@ -44,13 +43,21 @@ function App() {
     },
     { img: BurnImg, title: "Burned Supply", description: "53%" },
   ];
-  const contractAddress = "0xfb130d93e49dca13264344966a611dc79a456bc5";
+  const contractAddressEth = "0xfb130d93e49dca13264344966a611dc79a456bc5";
+  const contractAddressBase = "0x881Ed0FCeF78120A135eC6cC66cEf2779FE95BBA";
   const [arts, , setCurrentArtIndex, artMSlider, artDSlider] = useArt([]);
   const [faqs] = useFaq([], "");
-  const [setTitle] = useTooltip("Copy to Clipboard");
+  // Using useTooltip hook for each copy icon
+  const [] = useTooltip("Copy to Clipboard", "tooltipContent1");
+  const [] = useTooltip("Copy to Clipboard", "tooltipContent2");
 
-  const copyAddress = () => {
-    navigator.clipboard.writeText(contractAddress);
+
+  const copyAddress1 = () => {
+    navigator.clipboard.writeText(contractAddressEth);
+  };
+
+  const copyAddress2 = () => {
+    navigator.clipboard.writeText(contractAddressBase);
   };
 
   return (
@@ -107,13 +114,14 @@ function App() {
                         <div className="step d-flex align-items-center flex-wrap">
                           <span className="step-label mb-md-0">1</span>
                           <h3 className="step-title w-100 w-md-auto">
-                            Create a Metamask Wallet
+                            Choose Your Wallet
                           </h3>
                         </div>
                         <p className="step-description">
-                          $DOGEGF token is available on the Ethereum blockchain.
-                          MetaMask is the market leader in ERC20 (Ethereum)
-                          wallets. On Google Chrome, visit{" "}
+                          $DOGEGF token is available for trading on both the 
+                          Ethereum and Base networks. You can use popular 
+                          wallets such as MetaMask or Coinbase Wallet.
+                          On Google Chrome, visit{" "}
                           <a
                             href="https://metamask.io/"
                             rel="noreferrer noopener"
@@ -139,19 +147,21 @@ function App() {
                             Android
                           </a>
                           .
+                          Alternatively, you can follow similar steps
+                          and download the Coinbase Wallet.
                         </p>
                       </li>
                       <li>
                         <div className="step d-flex align-items-center flex-wrap">
                           <span className="step-label mb-md-0">2</span>
                           <h3 className="step-title w-100 w-md-auto">
-                            Send $ETH to MetaMask
+                            Send $ETH to Your Wallet
                           </h3>
                         </div>
                         <p className="step-description">
-                          Buy Ethereum through MetaMask or transfer it to your
-                          MetaMask wallet address from another wallet (e.g.
-                          Coinbase or Binance).
+                        Buy Ethereum (ETH) through MetaMask or Coinbase,
+                        or transfer it to your MetaMask or Coinbase Wallet
+                        address from another wallet (e.g., Binance).
                         </p>
                       </li>
                       <li>
@@ -162,9 +172,10 @@ function App() {
                           </h3>
                         </div>
                         <p className="step-description">
-                          You can currently buy $DOGEGF on{" "}
+                          On the Ethereum network, you can currently buy $DOGEGF 
+                          on{" "}
                           <a
-                            href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5"
+                            href="https://app.uniswap.org/swap?outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5&chain=mainnet"
                             rel="noreferrer noopener"
                             target="_blank"
                           >
@@ -178,16 +189,35 @@ function App() {
                           >
                             Sushiswap
                           </a>
-                          . Be carefull to use only and only this contract
-                          address: {contractAddress}
-                          <span id="tooltipContent">
-                            <CopyIcon
-                              styles={{ marginLeft: "5px", cursor: "pointer" }}
-                              onClick={() => copyAddress()}
-                              width={15}
-                              height={15}
-                            />
-                          </span>
+                          . Be carefull to use only the correct contract
+                          address: {contractAddressEth}
+                          <span id="tooltipContent1">
+                          <CopyIcon
+                            styles={{ marginLeft: "5px", cursor: "pointer" }}
+                            onClick={copyAddress1}
+                            width={15}
+                            height={15}
+                          />
+                        </span>
+                        <br />
+                          Similarly, on the Base network, you can use{" "}
+                          <a
+                            href="https://app.uniswap.org/swap?outputCurrency=0x881Ed0FCeF78120A135eC6cC66cEf2779FE95BBA&chain=base"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                          >
+                            Uniswap
+                          </a>{" "}
+                          again, but this time ensure to use only this 
+                          contract address for the Base network: {contractAddressBase}
+                          <span id="tooltipContent2">
+                          <CopyIcon
+                            styles={{ marginLeft: "5px", cursor: "pointer" }}
+                            onClick={copyAddress2}
+                            width={15}
+                            height={15}
+                          />
+                        </span>
                         </p>
                       </li>
                       <li>
@@ -240,19 +270,19 @@ function App() {
                     <div className="d-flex align-items-center">
                       <a
                         className="btn btn-primary btn-uniswap"
-                        href="https://app.uniswap.org/#/swap?outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5"
+                        href="https://app.uniswap.org/swap?outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5&chain=mainnet"
                         rel="noreferrer noopener"
                         target="_blank"
                       >
-                        Buy on Uniswap
+                        Buy on Ethereum
                       </a>
                       <a
                         className="btn btn-primary"
-                        href="https://app.sushi.com/swap?outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5"
+                        href="https://app.uniswap.org/swap?outputCurrency=0x881Ed0FCeF78120A135eC6cC66cEf2779FE95BBA&chain=base"
                         rel="noreferrer noopener"
                         target="_blank"
                       >
-                        Buy on Sushiswap
+                        Buy on Base
                       </a>
                     </div>
                   </div>

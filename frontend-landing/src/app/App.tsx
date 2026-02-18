@@ -118,8 +118,8 @@ function App() {
                           </h3>
                         </div>
                         <p className="step-description">
-                          $DOGEGF token is available for trading on both the 
-                          Ethereum and Base networks. You can use popular 
+                          $DOGEGF token is available for trading on both the
+                          Ethereum and Base networks. You can use popular
                           wallets such as MetaMask or Coinbase Wallet.
                           On Google Chrome, visit{" "}
                           <a
@@ -159,9 +159,9 @@ function App() {
                           </h3>
                         </div>
                         <p className="step-description">
-                        Buy Ethereum (ETH) through MetaMask or Coinbase,
-                        or transfer it to your MetaMask or Coinbase Wallet
-                        address from another wallet (e.g., Binance).
+                          Buy Ethereum (ETH) through MetaMask or Coinbase,
+                          or transfer it to your MetaMask or Coinbase Wallet
+                          address from another wallet (e.g., Binance).
                         </p>
                       </li>
                       <li>
@@ -172,7 +172,7 @@ function App() {
                           </h3>
                         </div>
                         <p className="step-description">
-                          On the Ethereum network, you can currently buy $DOGEGF 
+                          On the Ethereum network, you can currently buy $DOGEGF
                           on{" "}
                           <a
                             href="https://app.uniswap.org/swap?outputCurrency=0xfb130d93e49dca13264344966a611dc79a456bc5&chain=mainnet"
@@ -192,14 +192,14 @@ function App() {
                           . Be carefull to use only the correct contract
                           address: {contractAddressEth}
                           <span id="tooltipContent1">
-                          <CopyIcon
-                            styles={{ marginLeft: "5px", cursor: "pointer" }}
-                            onClick={copyAddress1}
-                            width={15}
-                            height={15}
-                          />
-                        </span>
-                        <br />
+                            <CopyIcon
+                              styles={{ marginLeft: "5px", cursor: "pointer" }}
+                              onClick={copyAddress1}
+                              width={15}
+                              height={15}
+                            />
+                          </span>
+                          <br />
                           Similarly, on the Base network, you can use{" "}
                           <a
                             href="https://app.uniswap.org/swap?outputCurrency=0x881Ed0FCeF78120A135eC6cC66cEf2779FE95BBA&chain=base"
@@ -208,16 +208,16 @@ function App() {
                           >
                             Uniswap
                           </a>{" "}
-                          again, but this time ensure to use only this 
+                          again, but this time ensure to use only this
                           contract address for the Base network: {contractAddressBase}
                           <span id="tooltipContent2">
-                          <CopyIcon
-                            styles={{ marginLeft: "5px", cursor: "pointer" }}
-                            onClick={copyAddress2}
-                            width={15}
-                            height={15}
-                          />
-                        </span>
+                            <CopyIcon
+                              styles={{ marginLeft: "5px", cursor: "pointer" }}
+                              onClick={copyAddress2}
+                              width={15}
+                              height={15}
+                            />
+                          </span>
                         </p>
                       </li>
                       <li>
@@ -514,30 +514,31 @@ function App() {
           </div>
         </div>
 
-        <div id="vaults" className="container-fluid">
-          <div className="vaults-container container-fluid">
+        <div id="gifting" className="container-fluid">
+          <div className="gifting-container container-fluid">
             <div className="d-flex flex-column align-items-lg-center">
               <label className="section-label">Coming soon</label>
-              <h2 className="section-title">DogeGF vaults</h2>
+              <h2 className="section-title">Gifting Platform</h2>
+
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-12 col-md-6 px-0">
                     <div className="panel-text container-fluid px-0 h-lg-100 ms-0 ms-lg-auto">
                       <div className="d-flex flex-column justify-content-lg-center h-lg-100">
-                        <h3 className="vaults-title">
-                          Get rewards for providing liquidity
-                        </h3>
+                        <h3 className="gifting-title">Spread Kindness Onchain</h3>
+
                         <button className="btn btn-primary text-uppercase bg-white">
-                          Coming Soon
+                          Coming soon
                         </button>
                       </div>
                     </div>
                   </div>
+
                   <div className="col-12 col-md-6 px-0">
                     <img
                       className="browser-img w-100"
                       src={BrowserImg}
-                      alt="dogegf-vaults-browser"
+                      alt="gifting-platform-preview"
                     />
                   </div>
                 </div>
@@ -545,6 +546,8 @@ function App() {
             </div>
           </div>
         </div>
+
+
 
         <div id="faq" className="container-fluid px-lg-0">
           <div className="container-fluid">

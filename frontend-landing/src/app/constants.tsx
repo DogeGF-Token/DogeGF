@@ -68,8 +68,8 @@ export const HEADER_LINKS = [
     link: "#art",
   },
   {
-    menu: "DogeGF Vaults",
-    link: "#vaults",
+    menu: "Gifting Platform",
+    link: "#gifting",
   },
   {
     menu: "Faq",
@@ -143,117 +143,48 @@ export const FOOTER_LINKS = [
 export const ROADMAP_PHASES = [
   {
     title: "Phase 1",
-    season: "",
+    season: "Foundation",
     items: [
-      {
-        label: "Website launch",
-        completed: true,
-      },
-      {
-        label: "Token launch",
-        completed: true,
-      },
-      {
-        label: "Community giveaways and contests",
-        completed: true,
-      },
+      { label: "Website launch", completed: true },
+      { label: "Token launch", completed: true },
+      { label: "Community giveaways & contests", completed: true },
+      { label: "CoinGecko & CoinMarketCap listings", completed: true },
+      { label: "First 1,000 holders", completed: true },
     ],
   },
   {
     title: "Phase 2",
-    season: "",
+    season: "Growth & Evolution",
     items: [
-      {
-        label: "Groundwork for strong community",
-        completed: true,
-      },
-      {
-        label: "Coingecko & Coinmarketcap listings",
-        completed: true,
-      },
-      {
-        label: "Community Events",
-        completed: true,
-      },
-      {
-        label: "First 1000 holders",
-        completed: true,
-      },
+      { label: "Community growth & events", completed: true },
+      { label: "Smart contract audit", completed: true },
+      { label: "DogeGF rebranding", completed: true },
+      { label: "Strategic burn events", completed: true },
+      { label: "First 5,000 holders", completed: true },
     ],
   },
   {
     title: "Phase 3",
-    season: "",
+    season: "Utility & Expansion",
     items: [
-      {
-        label: "Grow the team",
-        completed: true,
-      },
-      {
-        label: "Contract audit",
-        completed: true,
-      },
-      {
-        label: "Community events",
-        completed: true,
-      },
-      {
-        label: "Burn event",
-        completed: true,
-      },
-      {
-        label: "Rebranding",
-        completed: true,
-      },
-      // {
-      //   label: "Polygon",
-      //   completed: true,
-      // },
-      {
-        label: "First 5000 holders",
-        completed: true,
-      },
+      { label: "Community quests & events", completed: true },
+      { label: "Base Network integration", completed: true },
+      { label: "Kind Gestures Platform — MVP", completed: false },
     ],
   },
   {
     title: "Phase 4",
-    season: "",
+    season: "The Next Chapter",
     items: [
-      {
-        label: "DogeGF reward platform for kind gestures",
-        completed: false,
-      },
-      {
-        label: "DogeGF staking vaults",
-        completed: false,
-      },
-      {
-        label: "Community quests",
-        completed: false,
-      },
-      {
-        label: "Community events",
-        completed: true,
-      },
-      {
-        label: "Burn events",
-        completed: true,
-      },
-      {
-        label: "Based",
-        completed: true,
-      },
-      {
-        label: "First 100.000 holders",
-        completed: false,
-      },
-      {
-        label: "Build, build, build",
-        completed: false,
-      },
+      { label: "To be announced", completed: false },
+      { label: "Details revealed after MVP launch", completed: false },
+      { label: "buidl, buidl, buidl", completed: false },
     ],
   },
 ];
+
+
+
 
 export const BLOGS = [
   {

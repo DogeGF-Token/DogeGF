@@ -517,7 +517,7 @@ function App() {
         <div id="gifting" className="container-fluid">
           <div className="gifting-container container-fluid">
             <div className="d-flex flex-column align-items-lg-center">
-              <label className="section-label">Coming soon</label>
+              <label className="section-label">Live now</label>
               <h2 className="section-title">Gifting Platform</h2>
 
               <div className="container-fluid">
@@ -527,8 +527,11 @@ function App() {
                       <div className="d-flex flex-column justify-content-lg-center h-lg-100">
                         <h3 className="gifting-title">Spread Kindness Onchain</h3>
 
-                        <button className="btn btn-primary text-uppercase bg-white">
-                          Coming soon
+                        <button
+                          className="btn btn-primary bg-white"
+                          onClick={() => window.open("https://dogegifty.com", "_blank")}
+                        >
+                          Try DogeGiFty
                         </button>
                       </div>
                     </div>

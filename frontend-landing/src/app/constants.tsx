@@ -69,7 +69,7 @@ export const HEADER_LINKS = [
   },
   {
     menu: "Gifting Platform",
-    link: "#gifting",
+    link: "https://dogegifty.com",
   },
   {
     menu: "Faq",
@@ -118,11 +118,6 @@ export const FOOTER_LINKS = [
     children: <EtherscanIcon />,
     target: "_blank",
   },
-  // {
-  //   link: "https://polygonscan.com/token/0x0e7252706393470ffb0629da2caa39fc9340f2d4",
-  //   children: <PolygonIcon />,
-  //   target: "_blank",
-  // },
   {
     link: "https://www.coingecko.com/en/coins/dogegf",
     children: <CoingeckoIcon />,
@@ -169,15 +164,17 @@ export const ROADMAP_PHASES = [
     items: [
       { label: "Community quests & events", completed: true },
       { label: "Base Network integration", completed: true },
-      { label: "Kind Gestures Platform — MVP", completed: false },
+      { label: "Kind Gestures Platform — MVP", completed: true },
     ],
   },
   {
     title: "Phase 4",
     season: "The Next Chapter",
     items: [
-      { label: "To be announced", completed: false },
-      { label: "Details revealed after MVP launch", completed: false },
+      { label: "Expand DogeGifty functionality", completed: false },
+      { label: "Establish DogeGF as a global meme", completed: false },
+      { label: "Grow global community participation", completed: false },
+      { label: "First 100,000 holders", completed: false },
       { label: "buidl, buidl, buidl", completed: false },
     ],
   },
@@ -187,46 +184,54 @@ export const ROADMAP_PHASES = [
 
 
 export const BLOGS = [
+
+  {
+    title: "DogeGF: Built for the Long Game",
+    date: "",
+    img: require("assets/images/blogs/blog8.png").default,
+    link: "https://dogegf.medium.com/dogegf-built-for-the-long-game-de4eacdac79d",
+  },
+  {
+    title: "Crypto Just Got Kinder: Meet DogeGiFty",
+    date: "",
+    img: require("assets/images/blogs/blog7.png").default,
+    link: "https://dogegf.medium.com/crypto-just-got-kinder-meet-dogegifty-341c7bc62796",
+  },
   {
     title: "Meet DogeGF, the peer-to-peer coin of the new reciprocal society.",
-    date: "May 25",
+    date: "",
     img: require("assets/images/blogs/blog1.png").default,
     link: "https://dogegf.medium.com/meet-dogegf-the-peer-to-peer-coin-of-the-new-reciprocal-society-463b7c9ab238",
   },
   {
     title: "Reciprocity, the new experiment in crypto — part 1.",
-    date: "Jun 20",
+    date: "",
     img: require("assets/images/blogs/blog2.png").default,
     link: "https://dogegf.medium.com/reciprocity-the-new-experiment-in-crypto-part-1-e6da618aefa6",
   },
   {
     title: "DogeGF is rewarding internet creators with kind gestures",
-    date: "Aug 20",
+    date: "",
     img: require("assets/images/blogs/blog3.png").default,
     link: "https://dogegf.medium.com/dogegf-is-rewarding-internet-creators-with-kind-gestures-ad5bc1f893c4",
   },
   {
     title: "DogeGF, the start of a new, true & kind crypto community",
-    date: "Sep 26",
+    date: "",
     img: require("assets/images/blogs/blog4.png").default,
     link: "https://dogegf.medium.com/dogegf-the-start-of-a-new-true-kind-crypto-community-46a6e48a87ec",
   },
   {
     title: "Burn announcement",
-    date: "Oct 13",
+    date: "",
     img: require("assets/images/blogs/blog6.png").default,
     link: "https://dogegf.medium.com/dogegf-burn-announcement-988a53621a25",
   },
   {
     title: "Wallets Holding Locked DogeGF - Tokens Update",
-    date: "Nov 22",
+    date: "",
     img: require("assets/images/blogs/blog5.png").default,
     link: "https://dogegf.medium.com/wallets-holding-locked-dogegf-tokens-update-7d51565b4005",
   },
-  // {
-  //   title: "Polygon",
-  //   date: "Dec 30",
-  //   img: require("assets/images/blogs/blog7.png").default,
-  //   link: "https://dogegf.medium.com/we-are-happy-to-announce-that-dogegf-is-now-available-to-trade-on-polygon-network-c853c394a72a",
-  // },
-];
+
+];                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
